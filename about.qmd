@@ -6,7 +6,7 @@ about:
   links:
     - icon: file-earmark-text
       text: Resume
-      href: "Copy of Resume.pdf"
+      href: "Khang_Thai_Resume.pdf"
     - icon: linkedin
       text: Linkedin
       href: https://www.linkedin.com/in/khang-thai-361651203/
@@ -19,9 +19,11 @@ about:
 format: html
 css: styles.css
 body-classes: about-page
+execute:
+  freeze: false
 ---
 
-I am a incoming Master student at the University of Southern California studying Applied Data Science. I completed my Bachelors degree in Statistics and Data Science at UCLA.
+I am a Master student at the University of Southern California studying Applied Data Science. I completed my Bachelors degree in Statistics and Data Science at UCLA.
 
 I am actively seeking a career in Data Science or related fields.
 

@@ -1,0 +1,67 @@
+---
+date: "March 15, 2025"
+title: "Diabetes Risk Predictive Modeling"
+author: "Khang Thai"
+format:
+  html:
+    toc: false
+    navigation:
+      previous: true
+      next: true
+image: "diabetes_card.jpeg"
+---
+
+:::: tech-buttons
+[R]{.tech} [Logistic Regression]{.tech} [Tidyverse]{.tech} [Tidymodels]{.tech} [ggplot2]{.tech}
+::::
+
+<div class="project-content">
+
+## Introduction
+
+The **Diabetes Risk Predictive Modeling** project focuses on assessing an individual’s risk of developing diabetes using clinical and lifestyle features.  
+Using a dataset of **9,538 medical records**, the goal was to build a robust **classification model** that can flag high‑risk patients for early intervention.
+
+## Process
+
+To construct and evaluate the predictive model, the following steps were taken:
+
+1. **Data Preparation**
+   - Cleaned and validated 9,538 patient records in **R**, handling missing or inconsistent entries.
+   - Performed feature engineering on key risk factors such as **age, BMI, blood pressure, glucose level, and family history**.
+   - Standardized numeric variables and encoded categorical features using the **Tidyverse**.
+
+2. **Modeling**
+   - Implemented **logistic regression** as the primary classifier in **R** using **Tidymodels**.
+   - Applied **5‑fold cross‑validation** to evaluate stability and generalization.
+   - Used **model coefficients and variable importance plots** to quantify each variable’s contribution to diabetes risk.
+
+3. **Evaluation & Interpretation**
+   - Assessed performance using **accuracy**, **ROC‑AUC**, and **confusion matrix** in R.
+   - Visualized ROC curves and key feature effects (via **ggplot2**) to better communicate results to non‑technical stakeholders.
+
+## Outcome
+
+The final logistic regression model achieved:
+
+- **Accuracy:** **97%**
+- **AUC:** **0.99**
+- High recall on positive (diabetes) cases, making it suitable as an early‑screening tool.
+
+Feature importance analysis highlighted **glucose level, BMI, age, and family history** as the most influential predictors.  
+These insights support clinicians and public‑health practitioners in prioritizing high‑risk groups for follow‑up and preventive care.
+
+### Links
+
+📂 **Project Repository:** <a href="https://github.com/kunfupen/Diabetes-Research-Project" class="blue-text">GitHub - Diabetes Research Project</a>
+
+📑 **Research Report:** <a href="https://github.com/kunfupen/Diabetes-Research-Project/blob/main/Diabetes%20Research%20Report.pdf" class="blue-text">Diabetes Research Report (PDF)</a>
+
+<div class="project-nav-flex">
+[← Previous Project](project_2.qmd){.prev-arrow}
+
+[→ Next Project](Project_3.qmd){.next-arrow}
+</div>
+
+</div>
+

@@ -50,7 +50,7 @@ The final analysis revealed that:
 <div class="project-nav-flex">
   [← Previous Project](project_1.qmd){.prev-arrow}
   
-  [→ Next Project](Project_3.qmd){.next-arrow}
+  [→ Next Project](diabetes_risk_model.qmd){.next-arrow}
 </div>
 
 

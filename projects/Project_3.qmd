@@ -59,7 +59,7 @@ The project successfully implements a **task management system** with fundamenta
 📂 **Project Repository:** <a href="https://github.com/kunfupen/todo-list" class="blue-text">GitHub - To-Do List Application</a>
 
 <div class="project-nav-flex">
-  [← Previous Project](project_2.qmd){.prev-arrow}
+  [← Previous Project](diabetes_risk_model.qmd){.prev-arrow}
   
 </div>
 

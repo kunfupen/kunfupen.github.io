@@ -3,6 +3,7 @@
     "listing": "/projects.html",
     "items": [
       "/projects/project_1.html",
+      "/projects/diabetes_risk_model.html",
       "/projects/project_2.html",
       "/projects/Project_3.html"
     ]

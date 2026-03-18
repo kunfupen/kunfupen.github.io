@@ -11,7 +11,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "I am a incoming Master student at the University of Southern California studying Applied Data Science. I completed my Bachelors degree in Statistics and Data Science at UCLA.\nI am actively seeking a career in Data Science or related fields."
+    "text": "I am a Master student at the University of Southern California studying Applied Data Science. I completed my Bachelors degree in Statistics and Data Science at UCLA.\nI am actively seeking a career in Data Science or related fields."
   },
   {
     "objectID": "index.html#education",
@@ -32,7 +32,7 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Amazon Purchase Predictor Regression Model\n\n\n\n\n\n\nJul 28, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLA Airbnb Analysis\n\n\n\n\n\n\nMay 29, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTo do List\n\n\n\n\n\n\nJan 26, 2025\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Amazon Purchase Predictor Regression Model\n\n\n\n\n\n\nJul 28, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nDiabetes Risk Predictive Modeling\n\n\n\n\n\n\nMar 15, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nLA Airbnb Analysis\n\n\n\n\n\n\nMay 29, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nTo do List\n\n\n\n\n\n\nJan 26, 2025\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/project_2.html",
@@ -271,5 +271,33 @@
     "title": "\nWelcome\n",
     "section": "🚀 Projects",
     "text": "🚀 Projects\n\n\n🎯 Amazon Purchase Predictor\nA regression model built with R to predict customer spending behavior using Amazon purchase data.\nSkills: R, Data Cleaning, Feature Engineering, Regression, RMSE Optimization\n\n\n🏠 Airbnb Listing Analyzer\nAnalyzed LA Airbnb reviews and listings using NLP and Random Forest classification.\nSkills: NLP, Logistic Regression, Topic Modeling, Tableau\n\n\n🧠 Music vs. Puzzle Solving\nResearch project studying how different music genres affect puzzle cube solving performance.\nSkills: Experimental Design, Data Collection, Statistical Testing\n\n\n🕹 Sniped (Hide-and-Seek Game)\nA real-time game project where players track each other via GPS and play virtual hide-and-seek.\nSkills: Flutter, Firebase, GPS APIs, Game Logic"
+  },
+  {
+    "objectID": "projects/diabetes_risk_model.html",
+    "href": "projects/diabetes_risk_model.html",
+    "title": "Diabetes Risk Predictive Modeling",
+    "section": "",
+    "text": "R Logistic Regression Tidyverse Tidymodels ggplot2"
+  },
+  {
+    "objectID": "projects/diabetes_risk_model.html#introduction",
+    "href": "projects/diabetes_risk_model.html#introduction",
+    "title": "Diabetes Risk Predictive Modeling",
+    "section": "Introduction",
+    "text": "Introduction\nThe Diabetes Risk Predictive Modeling project focuses on assessing an individual’s risk of developing diabetes using clinical and lifestyle features.\nUsing a dataset of 9,538 medical records, the goal was to build a robust classification model that can flag high‑risk patients for early intervention."
+  },
+  {
+    "objectID": "projects/diabetes_risk_model.html#process",
+    "href": "projects/diabetes_risk_model.html#process",
+    "title": "Diabetes Risk Predictive Modeling",
+    "section": "Process",
+    "text": "Process\nTo construct and evaluate the predictive model, the following steps were taken:\n\nData Preparation\n\nCleaned and validated 9,538 patient records in R, handling missing or inconsistent entries.\nPerformed feature engineering on key risk factors such as age, BMI, blood pressure, glucose level, and family history.\nStandardized numeric variables and encoded categorical features using the Tidyverse.\n\nModeling\n\nImplemented logistic regression as the primary classifier in R using Tidymodels.\nApplied 5‑fold cross‑validation to evaluate stability and generalization.\nUsed model coefficients and variable importance plots to quantify each variable’s contribution to diabetes risk.\n\nEvaluation & Interpretation\n\nAssessed performance using accuracy, ROC‑AUC, and confusion matrix in R.\nVisualized ROC curves and key feature effects (via ggplot2) to better communicate results to non‑technical stakeholders."
+  },
+  {
+    "objectID": "projects/diabetes_risk_model.html#outcome",
+    "href": "projects/diabetes_risk_model.html#outcome",
+    "title": "Diabetes Risk Predictive Modeling",
+    "section": "Outcome",
+    "text": "Outcome\nThe final logistic regression model achieved:\n\nAccuracy: 97%\nAUC: 0.99\nHigh recall on positive (diabetes) cases, making it suitable as an early‑screening tool.\n\nFeature importance analysis highlighted glucose level, BMI, age, and family history as the most influential predictors.\nThese insights support clinicians and public‑health practitioners in prioritizing high‑risk groups for follow‑up and preventive care.\n\nLinks\n📂 Project Repository: GitHub - Diabetes Research Project\n📑 Research Report: Diabetes Research Report (PDF)\n\n← Previous Project\n→ Next Project"
   }
 ]

@@ -15,12 +15,10 @@ body {
   height: 100vh;
   width: 100%;
   display: flex;
-  align-items: flex-start;      /* Align to top */
+  align-items: center;          /* Vertically center content */
   justify-content: center;      /* Center horizontally */
-  padding-top: 20vh;            /* Push content down from the top */
   text-align: center;
   position: relative;
-    <a href="#about" class="scroll-down">↓</a>
 }
 
 .hero-title {
@@ -31,17 +29,15 @@ body {
   padding: 1rem 2rem;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
-  margin: 0; /* Remove any default margin */
-  margin-top: 10vh;              /* Push down from top */
-  margin-left: 7vw; 
+  margin: 0; /* Remove any default margin so it's truly centered */
 }
 
 .scroll-down {
-  color: #ffffff !important;          /* Force bright white */
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Soft glow for contrast */
-  font-size: 5rem;
-  position: absolute;
-  bottom: 20px;
+  color: #ffffff !important;                 /* Force bright white */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);  /* Soft glow for contrast */
+  font-size: 4rem;
+  position: absolute;                        /* position relative to viewport */
+  bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
   animation: bounce 2s infinite;
@@ -66,8 +62,9 @@ html {
 /* Background Filter */
 .home-container {
   background-color: rgba(255, 255, 255, 0.85); /* semi-transparent white */
-  padding: 3rem 2rem;
-  max-width: 800px;
+  padding: 3.5rem 3rem;
+  width: min(1100px, 92vw);   /* expand the white panel */
+  max-width: none;
   margin: 0 auto;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
@@ -78,7 +75,7 @@ html {
 .profile-img {
   display: block;
   margin: 0 auto 1rem;
-  height: 800px;      /* Smaller height */
+  height: 360px;      /* Larger profile image on home */
   object-fit: contain;
   border-radius: 0;
 }
@@ -148,6 +145,58 @@ body:not(.index)::before {
   height: 100%;
   background-color: rgba(255, 255, 255, 0); /* Adjust opacity */
   z-index: -1;
+}
+
+/* About page centering (works even if body class doesn't render) */
+body.about-page #quarto-content,
+body:has(.quarto-about-trestles) #quarto-content {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  transform: translateX(-24px); /* nudge layout slightly left */
+}
+
+/* Remove right TOC column on About to keep true centering */
+body.about-page #quarto-margin-sidebar,
+body:has(.quarto-about-trestles) #quarto-margin-sidebar {
+  display: none;
+}
+
+body.about-page #quarto-content.page-columns,
+body:has(.quarto-about-trestles) #quarto-content.page-columns {
+  grid-template-columns: 1fr !important;
+}
+
+body.about-page .quarto-about-trestles,
+body .quarto-about-trestles {
+  /* Stack + center the trestles layout to avoid left/right visual bias */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.about-page .about-entity,
+body .quarto-about-trestles .about-entity {
+  text-align: center;
+  width: min(900px, 92vw);
+}
+
+body.about-page img.about-image,
+body .quarto-about-trestles img.about-image {
+  width: min(28rem, 80vw) !important; /* override inline 20em */
+  height: auto;
+}
+
+body.about-page .about-contents,
+body .quarto-about-trestles .about-contents {
+  width: min(900px, 92vw);
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -241,45 +290,71 @@ th i.fa-sort, th i.fa-sort-asc, th i.fa-sort-desc {
  
 /* Projects page override */
 body.projects-page {
-  background-color: white !important;
-  background-image: none !important;  /* Remove background image */
+  /* Keep global background image from body and just add spacing */
   color: black !important;
   padding: 2rem 1.5rem;
   min-height: 100vh;
 }
 
-/* Make each grid item wider */
-.quarto-grid .quarto-grid-item {
-  flex: 1 1 100%;     /* Start by taking full width */
-  max-width: 100%;
+/* Project grid – centered card layout using Quarto listing grid */
+/* Project grid – centered card layout using Quarto listing grid */
+.projects-page .quarto-listing-container-grid .list {
+  display: grid;
+  /* Auto-fit as many reasonably wide cards as possible across the row */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  justify-content: center;  /* center the grid within available space */
 }
 
-@media (min-width: 768px) {
-  .quarto-grid .quarto-grid-item {
-    flex: 1 1 48%;     /* Two per row on medium+ screens */
-    max-width: 48%;
-  }
+/* Let the content container be wider and centered on the projects page and use more horizontal space */
+.projects-page #quarto-content {
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
-@media (min-width: 1200px) {
-  .quarto-grid .quarto-grid-item {
-    flex: 1 1 40%;     /* Slightly wider on large screens */
-    max-width: 40%;
-  }
+.projects-page .quarto-grid-item.card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 1.4rem 1.6rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: left;
 }
 
-
-/* Make project listing titles smaller */
-.quarto-grid-item .listing-title {
-  font-size: 1rem;   /* You can reduce to 1rem if needed */
-  font-weight: 600;     /* Optional: adjust weight */
-  margin-bottom: 0.5rem;
+.projects-page .quarto-grid-item.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.12);
 }
 
+.projects-page .card-img-top img {
+  width: 100%;
+  height: 130px;   /* shorter image height for flatter cards */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.9rem;
+}
 
-/* Ensure project titles are not all caps */
-.quarto-grid-item .listing-title {
+/* Project listing typography */
+.projects-page .quarto-grid-item .listing-title {
+  font-size: 1.05rem;
+  font-weight: 650;
+  margin-bottom: 0.3rem;
   text-transform: none !important;
+}
+
+.projects-page .quarto-grid-item .listing-description {
+  font-size: 0.9rem;
+  color: #444;
+  margin-top: 0.15rem;
+}
+
+.projects-page .quarto-grid-item .listing-date {
+  font-size: 0.8rem;
+  color: #777;
+  margin-bottom: 0.3rem;
 }
 
 .project-content {
