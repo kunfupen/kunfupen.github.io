@@ -205,6 +205,8 @@ main.content {
 .home-container h2,
 .home-container h4 {
   text-align: left;
+  border-bottom: 2px solid rgba(0, 151, 143, 0.58);
+  padding-bottom: 0.35rem;
 }
 
 .home-container h2 {
