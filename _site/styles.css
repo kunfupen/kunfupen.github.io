@@ -195,7 +195,7 @@ main.content {
   margin: 0 auto 5rem !important;
   padding: clamp(3rem, 6vw, 5.5rem);
   align-items: start;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.82);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(216, 221, 216, 0.8);
   border-radius: 8px;
@@ -204,13 +204,30 @@ main.content {
 
 .home-container h2,
 .home-container h4 {
-  color: var(--ink);
   text-align: left;
 }
 
 .home-container h2 {
   margin-top: 0;
+  color: #071823;
   font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+}
+
+.home-container h4 {
+  color: #006d66;
+  font-weight: 900;
+}
+
+.home-container p,
+.home-container li {
+  color: #102331;
+  font-weight: 600;
+}
+
+.home-container strong {
+  color: #063f3b;
+  font-weight: 900;
 }
 
 .profile-img {
