@@ -4,7 +4,7 @@ project:
 website:
   title: "Khang Thai"
   navbar:
-    background:  transparent
+    background: transparent
     right:
       - href: index.qmd
         text: Home
@@ -16,11 +16,9 @@ format:
       - lux
       - brand
     css: styles.css
-    toc: true
+    toc: false
 
 editor: visual
 
-
 execute: 
   freeze: auto
-class: "index"

@@ -1,8 +1,11 @@
 ---
 date: "Jan 26, 2025"
-title: "To do List"
+title: "To-Do List"
 author: "Khang Thai"
-image: "todo list.jpeg"
+format: html
+css: styles.css
+image: "todo-list.jpeg"
+description: "A Java and PostgreSQL task manager with core CRUD operations through JDBC."
 ---
 
 ::: tech-buttons
@@ -13,54 +16,40 @@ image: "todo list.jpeg"
 
 ## Introduction
 
-The **To-Do List Application** is a simple Java-based program that allows users to manage tasks with basic **CRUD (Create, Read, Update, Delete) functionality**. It uses **PostgreSQL** as the backend database for task storage and provides an interactive user interface for managing tasks efficiently.
+The **To-Do List Application** is a Java-based program that allows users to manage tasks with basic CRUD functionality. It uses **PostgreSQL** as the backend database for task storage and provides an interactive console interface for managing tasks efficiently.
 
 ## Process
 
-To develop the **To-Do List Application**, the following steps were taken:
-
-1.  **Database Setup:**
-    -   Designed a **PostgreSQL database schema** with a tasks table.\
-    -   Defined columns for **task ID, name, description, due date, and status**.
-2.  **JDBC Integration:**
-    -   Established a **JDBC connection** to interact with the PostgreSQL database.\
-    -   Implemented **SQL queries** for inserting, retrieving, updating, and deleting tasks.
-3.  **Backend Development:**
-    -   Created a **Java application** with CRUD operations.\
-    -   Used **Prepared Statements** to prevent SQL injection.
-4.  **User Interface Implementation:**
-    -   Developed a **console-based UI** for task management.\
-    -   Provided user-friendly prompts for adding, viewing, updating, and deleting tasks.
-5.  **Testing & Debugging:**
-    -   Tested database interactions with sample task entries.\
-    -   Debugged connection issues and ensured data integrity.
+1. **Database Setup:**
+   - Designed a PostgreSQL database schema with a tasks table.
+   - Defined columns for task ID, name, description, due date, and status.
+2. **JDBC Integration:**
+   - Established a JDBC connection to interact with the PostgreSQL database.
+   - Implemented SQL queries for inserting, retrieving, updating, and deleting tasks.
+3. **Backend Development:**
+   - Created a Java application with CRUD operations.
+   - Used prepared statements to prevent SQL injection.
+4. **User Interface Implementation:**
+   - Developed a console-based UI for task management.
+   - Provided prompts for adding, viewing, updating, and deleting tasks.
 
 ## Features
 
-1.  **Add Task:**
-    -   Create a new task with a **name, description, due date, and status**.
-2.  **View Tasks:**
-    -   Retrieve and display all tasks stored in the database.
-3.  **Update Task:**
-    -   Modify the task **name and status**.
-4.  **Delete Task:**
-    -   Remove a task from the database permanently.
+- **Add Task:** Create a new task with a name, description, due date, and status.
+- **View Tasks:** Retrieve and display all tasks stored in the database.
+- **Update Task:** Modify the task name and status.
+- **Delete Task:** Remove a task from the database permanently.
 
 ## Outcome
 
-The project successfully implements a **task management system** with fundamental database operations. Future enhancements may include:
+The project successfully implements a task management system with fundamental database operations. Future enhancements may include user authentication, task filtering, sorting, and a front-end interface.
 
--   **User authentication** for personalized task management\
--   **Task filtering and sorting** by due date or priority\
--   **Integration with a front-end interface** for a better user experience
+### Links
 
-### **Links**
-
-📂 **Project Repository:** <a href="https://github.com/kunfupen/todo-list" class="blue-text">GitHub - To-Do List Application</a>
+**Project Repository:** <a href="https://github.com/kunfupen/todo-list" class="blue-text">GitHub - To-Do List Application</a>
 
 <div class="project-nav-flex">
-  [← Previous Project](diabetes_risk_model.qmd){.prev-arrow}
-  
+[Previous Project](project_2.qmd){.prev-arrow}
 </div>
 
 </div>

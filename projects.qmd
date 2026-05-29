@@ -3,11 +3,66 @@ title: "Projects"
 format: html
 css: styles.css
 body-classes: projects-page
+page-layout: full
 listing:
   type: grid
   contents:
-    - "posts"
     - "projects/*.qmd"
+  sort: "date desc"
   fields: [title, date, description, image]
-
 ---
+
+Explore selected work across predictive modeling, statistical analysis, dashboards, and software development.
+
+```{=html}
+<div class="project-filter" aria-label="Project date filters">
+  <div class="filter-years" role="group" aria-label="Filter by year">
+    <button type="button" class="filter-chip active" data-year="all">All</button>
+    <button type="button" class="filter-chip" data-year="2025">2025</button>
+    <button type="button" class="filter-chip" data-year="2024">2024</button>
+  </div>
+  <p class="filter-count" aria-live="polite"></p>
+</div>
+<p class="filter-empty" hidden>No projects match that date filter.</p>
+```
+
+```{=html}
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const controls = document.querySelector(".project-filter");
+  const empty = document.querySelector(".filter-empty");
+  const count = document.querySelector(".filter-count");
+  if (!controls || !empty || !count) return;
+
+  const chips = Array.from(controls.querySelectorAll(".filter-chip"));
+  const cards = Array.from(document.querySelectorAll("[data-listing-date-sort]"));
+
+  const applyFilters = () => {
+    const activeYear = controls.querySelector(".filter-chip.active")?.dataset.year || "all";
+    let visible = 0;
+
+    cards.forEach((card) => {
+      const timestamp = Number(card.dataset.listingDateSort);
+      const date = new Date(timestamp);
+      const matchesYear = activeYear === "all" || String(date.getFullYear()) === activeYear;
+      const show = matchesYear;
+      card.hidden = !show;
+      if (show) visible += 1;
+    });
+
+    empty.hidden = visible !== 0;
+    count.textContent = `${visible} project${visible === 1 ? "" : "s"} shown`;
+  };
+
+  chips.forEach((chip) => {
+    chip.addEventListener("click", () => {
+      chips.forEach((item) => item.classList.remove("active"));
+      chip.classList.add("active");
+      applyFilters();
+    });
+  });
+
+  applyFilters();
+});
+</script>
+```

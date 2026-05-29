@@ -8,10 +8,10 @@ about:
       text: Resume
       href: "Khang_Thai_Resume.pdf"
     - icon: linkedin
-      text: Linkedin
+      text: LinkedIn
       href: https://www.linkedin.com/in/khang-thai-361651203/
     - icon: github
-      text: Github
+      text: GitHub
       href: https://github.com/kunfupen
     - icon: envelope
       text: Email
@@ -19,43 +19,45 @@ about:
 format: html
 css: styles.css
 body-classes: about-page
-execute:
-  freeze: false
 ---
 
-I am a Master student at the University of Southern California studying Applied Data Science. I completed my Bachelors degree in Statistics and Data Science at UCLA.
+I am an incoming master's student at the University of Southern California studying Applied Data Science. I completed my bachelor's degree in Statistics and Data Science at UCLA.
 
 I am actively seeking a career in Data Science or related fields.
 
 ## Education
 
-University of Southern California \| M.S. [[Applied Data Science](https://datascience.usc.edu/academics/master-of-science-in-applied-data-science/)]{.blue-text} \| Aug 2025 - May 2027
+University of Southern California | M.S. [[Applied Data Science](https://datascience.usc.edu/academics/master-of-science-in-applied-data-science/)]{.blue-text} | Aug 2025 - May 2027
 
-University of California, Los Angeles \| B.S. [[Statistics and Data Science](https://statistics.ucla.edu/index.php/academics/undergraduate/statistics-major-worksheets/)]{.blue-text} \| Sept 2023 - June 2025
+University of California, Los Angeles | B.S. [[Statistics and Data Science](https://statistics.ucla.edu/index.php/academics/undergraduate/statistics-major-worksheets/)]{.blue-text} | Sept 2023 - June 2025
 
-San Diego Miramar College \| San Diego, CA \| Aug 2021 - May 2023
+San Diego Miramar College | San Diego, CA | Aug 2021 - May 2023
 
 ## Experience
 
-NeverEnding, Inc. \| Software Developer Backend Intern \| May 2024 - Aug 2024
+Hologic Inc. | Bioinformatics Intern | June 2026 - Sept 2026
+
+NeverEnding, Inc. | Software Developer Backend Intern | May 2024 - Aug 2024
 
 ## Skills
 
 ### **Languages**
 
-**🐍 Python** \| **🔵 R** \| **🗄 SQL** \| **☕ Java** \| **🖥️ C++** \| **⚡JavaScript**
+**Python** | **R** | **SQL** | **Java** | **C++** | **JavaScript**
 
 ### **Technologies/Frameworks**
 
--   Microsoft Office
--   NumPy
--   Pandas
--   PostgresSQL
--   Stata
--   Tableau
--   Stripe API
--   Django
--   React
--   Jira
--   Github
--   Git
+- **AI Tools**
+- **Agentic AI Workflows**
+- Microsoft Office
+- NumPy
+- Pandas
+- PostgreSQL
+- Stata
+- Tableau
+- Stripe API
+- Django
+- React
+- Jira
+- GitHub
+- Git

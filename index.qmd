@@ -1,95 +1,98 @@
 ---
 format: html
 css: styles.css
-class: "index"
 body-classes: index
 ---
 
+```{=html}
 <div class="hero-section">
-
-  <h1 class="hero-title">Welcome</h1>
-
-
+<div class="hero-copy">
+<h1 class="hero-title">Welcome</h1>
+<div class="hero-actions">
+<a href="#about" class="button primary">About Me</a>
+<a href="projects.html" class="button secondary">Projects</a>
 </div>
-
-<a href="#about" class="scroll-down">↓</a>
-
+</div>
+<a href="#about" class="scroll-down" aria-label="Scroll to profile"><i class="bi bi-chevron-down"></i></a>
+</div>
+```
 
 <div class="home-container" id="about">
-  <img src="profile_pic.jpeg" alt="Profile Picture" class="profile-img">
+  <img src="profile_pic.jpeg" alt="Khang Thai" class="profile-img">
+
+  <div>
 
 ## About Me
 
+```{=html}
 <div class="social-icons">
-  <a href="Khang_Thai_Resume.pdf" target="_blank" aria-label="Resume">
-    <i class="bi bi-file-earmark-text"></i>
-  </a>
-  <a href="mailto:khangthai348@gmail.com" target="_blank" aria-label="Email">
-    <i class="bi bi-envelope"></i>
-  </a>
-  <a href="https://www.linkedin.com/in/khang-thai-361651203/" target="_blank" aria-label="LinkedIn">
-    <i class="bi bi-linkedin"></i>
-  </a>
-  <a href="https://github.com/kunfupen" target="_blank" aria-label="GitHub">
-    <i class="bi bi-github"></i>
-  </a>
+<a href="Khang_Thai_Resume.pdf" aria-label="Resume">
+<i class="bi bi-file-earmark-text"></i>
+</a>
+<a href="mailto:khangthai348@gmail.com" aria-label="Email">
+<i class="bi bi-envelope"></i>
+</a>
+<a href="https://www.linkedin.com/in/khang-thai-361651203/" aria-label="LinkedIn">
+<i class="bi bi-linkedin"></i>
+</a>
+<a href="https://github.com/kunfupen" aria-label="GitHub">
+<i class="bi bi-github"></i>
+</a>
 </div>
+```
 
-
-
-
-My name is Khang Thai. I am a incoming Master student at the University of Southern California studying Applied Data Science. I completed my Bachelors degree in Statistics and Data Science at UCLA.
+My name is Khang Thai. I am an incoming master's student at the University of Southern California studying Applied Data Science. I completed my bachelor's degree in Statistics and Data Science at UCLA.
 
 I am actively seeking a career in Data Science or related fields.
 
 ## Education
 
-University of Southern California \| M.S. [[Applied Data Science](https://datascience.usc.edu/academics/master-of-science-in-applied-data-science/)]{.blue-text} \| Aug 2025 - May 2027
+University of Southern California | M.S. [[Applied Data Science](https://datascience.usc.edu/academics/master-of-science-in-applied-data-science/)]{.blue-text} | Aug 2025 - May 2027
 
-University of California, Los Angeles \| B.S. [[Statistics and Data Science](https://statistics.ucla.edu/index.php/academics/undergraduate/statistics-major-worksheets/)]{.blue-text} \| Sept 2023 - June 2025
+University of California, Los Angeles | B.S. [[Statistics and Data Science](https://statistics.ucla.edu/index.php/academics/undergraduate/statistics-major-worksheets/)]{.blue-text} | Sept 2023 - June 2025
 
-San Diego Miramar College \| San Diego, CA \| Aug 2021 - May 2023
+San Diego Miramar College | San Diego, CA | Aug 2021 - May 2023
 
 ## Experience
 
-NeverEnding, Inc. \| Software Developer Backend Intern \| May 2024 - Aug 2024
+Hologic Inc. | Bioinformatics Intern | June 2026 - Sept 2026
+
+NeverEnding, Inc. | Software Developer Backend Intern | May 2024 - Aug 2024
 
 ## Skills
 
 #### Languages
 
 <div class="tech-group">
-  <span class="tech-box">🐍 Python</span>
-  <span class="tech-box">🔵 R</span>
-  <span class="tech-box">🗄 SQL</span>
-  <span class="tech-box">☕ Java</span>
-  <span class="tech-box">🖥️ C++</span>
-  <span class="tech-box">⚡ JavaScript</span>
-  <span class="tech-box">🚀 Dart</span>
+  <span class="tech-box">Python</span>
+  <span class="tech-box">R</span>
+  <span class="tech-box">SQL</span>
+  <span class="tech-box">Java</span>
+  <span class="tech-box">C++</span>
+  <span class="tech-box">JavaScript</span>
+  <span class="tech-box">Dart</span>
 </div>
 
 #### Technologies/Frameworks
 
 <div class="tech-group">
+  <span class="tech-box ai-skill">AI Tools</span>
+  <span class="tech-box ai-skill">Agentic AI Workflows</span>
   <span class="tech-box">Microsoft Office</span>
   <span class="tech-box">NumPy</span>
   <span class="tech-box">Pandas</span>
-  <span class="tech-box">PostgresSQL</span>
-  <span class="tech-box">MySql</span>
+  <span class="tech-box">PostgreSQL</span>
+  <span class="tech-box">MySQL</span>
   <span class="tech-box">Stata</span>
   <span class="tech-box">Tableau</span>
-  
   <span class="tech-box">Flutter</span>
   <span class="tech-box">React</span>
   <span class="tech-box">Jira</span>
-  <span class="tech-box">Github</span>
+  <span class="tech-box">GitHub</span>
   <span class="tech-box">Git</span>
-  <span class="tech-box">VSCode</span>
+  <span class="tech-box">VS Code</span>
   <span class="tech-box">RStudio</span>
 </div>
- 
 
-
+  </div>
 </div>
-
-

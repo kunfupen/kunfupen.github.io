@@ -8,6 +8,7 @@
 
 <meta name="author" content="Khang Thai">
 <meta name="dcterms.date" content="2024-07-28">
+<meta name="description" content="A random forest regression workflow for predicting customer spending from purchase and demographic features.">
 
 <title>Amazon Purchase Predictor Regression Model – Khang Thai</title>
 <style>
@@ -122,6 +123,11 @@ ul.task-list li input[type="checkbox"] {
 <h1 class="title">Amazon Purchase Predictor Regression Model</h1>
 </div>
 
+<div>
+  <div class="description">
+    A random forest regression workflow for predicting customer spending from purchase and demographic features.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -154,30 +160,25 @@ ul.task-list li input[type="checkbox"] {
 <div class="project-content">
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>The <strong>Amazon Purchase Predictor Regression Model</strong> aims to analyze purchasing behaviors based on demographic and transaction data. The primary goal was to predict <strong>log_total</strong>, the total spending amount in log scale, using various explanatory variables. By implementing regression techniques, this study identifies key factors influencing customer spending habits and provides insights into consumer behavior.</p>
+<p>The <strong>Amazon Purchase Predictor Regression Model</strong> analyzes purchasing behaviors based on demographic and transaction data. The primary goal was to predict <strong>log_total</strong>, the total spending amount in log scale, using explanatory variables from the dataset. By implementing regression techniques, this study identifies key factors influencing customer spending habits and provides insight into consumer behavior.</p>
 </section>
 <section id="process" class="level2">
 <h2 class="anchored" data-anchor-id="process">Process</h2>
-<p>To build the predictive model, the following steps were taken:</p>
 <ol type="1">
 <li><strong>Data Preprocessing:</strong>
 <ul>
-<li>Cleaned and handled missing values.<br>
-</li>
-<li>Normalized and transformed variables where necessary.<br>
-</li>
+<li>Cleaned and handled missing values.</li>
+<li>Normalized and transformed variables where necessary.</li>
 <li>Selected relevant features based on correlation and importance.</li>
 </ul></li>
-<li><strong>Model Selection &amp; Training:</strong>
+<li><strong>Model Selection and Training:</strong>
 <ul>
-<li>Experimented with multiple regression models, including <strong>Linear Regression, Ridge Regression, Lasso Regression, Random Forest, and KNN Regression</strong>.<br>
-</li>
+<li>Experimented with linear regression, ridge regression, lasso regression, random forest, and KNN regression.</li>
 <li>Tuned hyperparameters using cross-validation for optimal performance.</li>
 </ul></li>
 <li><strong>Feature Engineering:</strong>
 <ul>
-<li>Identified key explanatory variables such as <strong>count_hh4</strong> (household size) and <strong>count_G</strong> (order count), which showed a strong correlation with <strong>log_total</strong>.<br>
-</li>
+<li>Identified key explanatory variables such as <strong>count_hh4</strong> and <strong>count_G</strong>, which showed strong correlation with <strong>log_total</strong>.</li>
 <li>Considered interactions between income level and purchasing frequency to refine the model.</li>
 </ul></li>
 </ol>
@@ -186,21 +187,18 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="outcome">Outcome</h2>
 <p>The final model selected was a <strong>Random Forest regression model</strong>, which achieved:</p>
 <ul>
-<li><p><strong>Root Mean Squared Error (RMSE):</strong> <strong>0.1128934</strong><br>
-</p></li>
-<li><p><strong>Standard Error (SE):</strong> <strong>0.003002182</strong><br>
-</p></li>
-<li><p><strong>R² Score:</strong> <em>Higher than 0.9587, indicating strong predictive power.</em></p></li>
-<li><p>The results confirmed that <strong>household size, order count, and income level were significant predictors</strong> of Amazon purchases.<br>
-</p></li>
-<li><p><strong>KNN regression was tested but did not outperform tree-based models in terms of accuracy.</strong></p></li>
+<li><strong>Root Mean Squared Error (RMSE):</strong> <strong>0.1128934</strong></li>
+<li><strong>Standard Error (SE):</strong> <strong>0.003002182</strong></li>
+<li><strong>R-squared Score:</strong> <em>Higher than 0.9587, indicating strong predictive power.</em></li>
+<li>Household size, order count, and income level were significant predictors of Amazon purchases.</li>
+<li>KNN regression was tested but did not outperform tree-based models in terms of accuracy.</li>
 </ul>
 <section id="links" class="level3">
-<h3 class="anchored" data-anchor-id="links"><strong>Links</strong></h3>
-<p>📂 <strong>Project Repository:</strong> <a href="https://github.com/kunfupen/Amazon-Purchase-Predictor-Regression-Model" class="blue-text">GitHub - Amazon Purchase Predictor</a></p>
-<p>📑 <strong>Final Report:</strong> <a href="Kaggle Report Submission - regression.pdf" class="blue-text">PDF Report</a></p>
+<h3 class="anchored" data-anchor-id="links">Links</h3>
+<p><strong>Project Repository:</strong> <a href="https://github.com/kunfupen/Amazon-Purchase-Predictor-Regression-Model" class="blue-text">GitHub - Amazon Purchase Predictor</a></p>
+<p><strong>Final Report:</strong> <a href="Kaggle Report Submission - regression.pdf" class="blue-text">PDF Report</a></p>
 <div class="project-nav-flex">
-<p><a href="../projects/project_2.html" class="next-arrow">→ Next Project</a></p>
+<p><a href="../projects/project_2.html" class="next-arrow">Next Project</a></p>
 </div>
 </section>
 </section>

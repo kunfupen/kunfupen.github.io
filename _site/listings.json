@@ -2,10 +2,10 @@
   {
     "listing": "/projects.html",
     "items": [
+      "/projects/Project_4.html",
+      "/projects/Project_3.html",
       "/projects/project_1.html",
-      "/projects/diabetes_risk_model.html",
-      "/projects/project_2.html",
-      "/projects/Project_3.html"
+      "/projects/project_2.html"
     ]
   }
 ]

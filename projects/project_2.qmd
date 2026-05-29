@@ -4,7 +4,8 @@ title: "LA Airbnb Analysis"
 author: "Khang Thai"
 format: html
 css: styles.css
-image: "airbnb.jpeg"
+image: "airbnb-card.jpeg"
+description: "An analysis and Tableau dashboard for LA Airbnb host performance, pricing, listings, and review sentiment."
 ---
 
 ::: tech-buttons
@@ -15,45 +16,55 @@ image: "airbnb.jpeg"
 
 ## Introduction
 
-The **LA Airbnb Analysis** project aims to analyze Airbnb listings and reviews in Los Angeles. The primary objective is to provide insights and strategies to Airbnb hosts to enhance their performance and profitability. The datasets used are in CSV format, comprising two main datasets: one with 45,591 rows of listings and another with 55,240 reviews. The host analysis focuses on understanding the factors that contribute to a host achieving superhost status. Superhosts are associated with higher profits and more visibility on the platform.
+The **LA Airbnb Analysis** project analyzes Airbnb listings and reviews in Los Angeles. The objective is to provide insights and strategies that help hosts improve performance and profitability. The project uses listings and review datasets, then focuses on factors that contribute to superhost status, pricing, sentiment, and listing visibility.
 
 ## Process
 
-To build the analysis, the following steps were taken:
+1. **Host Analysis:**
+   - Analyzed key predictors such as response rates, acceptance rates, ratings, profile pictures, and duration of hosting.
+   - Used logistic regression and random forest models to determine factors contributing to superhost status.
+2. **Listing Analysis with NLP:**
+   - Applied natural language processing to conduct sentiment analysis of reviews.
+   - Used Latent Dirichlet Allocation for topic modeling to identify themes in guest reviews.
+3. **Dashboard Development:**
+   - Created an interactive dashboard displaying price, room type, beds, ratings, and location.
+   - Included filters for guests to find listings based on their preferences.
 
-1.  **Host Analysis:**
-    -   Analyzed key predictors such as **response rates**, **acceptance rates**, **ratings**, **profile pictures**, and **duration of hosting**.
-    -   Used **logistic regression** and **random forest models** to determine factors contributing to superhost status.
-2.  **Listing Analysis with NLP:**
-    -   Applied **Natural Language Processing (NLP)** to conduct **sentiment analysis** of reviews.
-    -   Used **Latent Dirichlet Allocation (LDA)** for **topic modeling** to identify themes in guest reviews.
-3.  **Dashboard Development:**
-    -   Created an **interactive dashboard** displaying important information like price, room type, and the number of beds.
-    -   Included filters for guests to easily find the right listing based on their preferences.
+## Interactive Dashboard
+
+```{=html}
+<div class="tableau-embed">
+  <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+  <tableau-viz
+    id="airbnb-tableau-viz"
+    src="https://public.tableau.com/views/airbnbdashboard_17164968027300/Dashboard1"
+    toolbar="bottom"
+    device="desktop"
+    hide-tabs>
+  </tableau-viz>
+</div>
+<div class="dashboard-panel compact">
+  <p>If the embedded dashboard does not load, open it directly on Tableau Public.</p>
+  <a class="button primary" href="https://public.tableau.com/app/profile/remi.l5319/viz/airbnbdashboard_17164968027300/Dashboard1">Open Interactive Dashboard</a>
+</div>
+```
 
 ## Outcome
 
-The final analysis revealed that:
+- Key predictors for achieving **superhost status** included high ratings, acceptance rates, and response rates.
+- Test accuracies for logistic regression and random forest models were **74%** and **76%**, respectively.
+- Suggested strategies included maintaining high ratings, addressing negative reviews, and improving acceptance rates.
+- Sentiment analysis helped identify common issues with low-rated listings.
 
--   Key predictors for achieving **superhost status** included **high ratings**, **acceptance rates**, and **response rates**.
--   **Test accuracies** for logistic regression and random forest models were **74%** and **76%**, respectively.
--   Suggested strategies for hosts to improve their chances of becoming superhosts included maintaining high ratings, addressing negative reviews, and using features like **instant booking** and **updated calendars** to improve acceptance rates.
--   Sentiment analysis of reviews helped identify common issues with low-rated listings.
+### Links
 
-### **Links**
+**Project Repository:** <a href="https://github.com/kunfupen/LA-Airbnb-Analysis" class="blue-text">GitHub - LA Airbnb Analysis</a>
 
-📂 **Project Repository:** <a href="https://github.com/kunfupen/LA-Airbnb-Analysis" class="blue-text">GitHub - LA Airbnb Analysis</a>
-
-📊 **Presentation Slides:** <a href="Airbnb Analysis.pdf" class="blue-text">Airbnb Analysis</a>
-
+**Presentation Slides:** <a href="Airbnb Analysis.pdf" class="blue-text">Airbnb Analysis</a>
 
 <div class="project-nav-flex">
-  [← Previous Project](project_1.qmd){.prev-arrow}
-  
-  [→ Next Project](diabetes_risk_model.qmd){.next-arrow}
+[Previous Project](project_1.qmd){.prev-arrow}
+[Next Project](Project_3.qmd){.next-arrow}
 </div>
-
-
-
 
 </div>

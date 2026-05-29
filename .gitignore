@@ -4,5 +4,7 @@
 .Ruserdata
 
 /.quarto/
-
-**/*.quarto_ipynb
+/_freeze/
+/_site/
+desktop.ini
+projects/desktop.ini

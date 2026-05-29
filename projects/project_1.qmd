@@ -2,13 +2,14 @@
 date: "July 28, 2024"
 title: "Amazon Purchase Predictor Regression Model"
 author: "Khang Thai"
-format: 
+format:
   html:
     toc: false
     navigation:
       previous: true
       next: true
 image: "amazon.jpeg"
+description: "A random forest regression workflow for predicting customer spending from purchase and demographic features."
 ---
 
 ::: tech-buttons
@@ -19,48 +20,39 @@ image: "amazon.jpeg"
 
 ## Introduction
 
-The **Amazon Purchase Predictor Regression Model** aims to analyze purchasing behaviors based on demographic and transaction data. The primary goal was to predict **log_total**, the total spending amount in log scale, using various explanatory variables. By implementing regression techniques, this study identifies key factors influencing customer spending habits and provides insights into consumer behavior.
+The **Amazon Purchase Predictor Regression Model** analyzes purchasing behaviors based on demographic and transaction data. The primary goal was to predict **log_total**, the total spending amount in log scale, using explanatory variables from the dataset. By implementing regression techniques, this study identifies key factors influencing customer spending habits and provides insight into consumer behavior.
 
 ## Process
 
-To build the predictive model, the following steps were taken:
-
-1.  **Data Preprocessing:**
-    -   Cleaned and handled missing values.\
-    -   Normalized and transformed variables where necessary.\
-    -   Selected relevant features based on correlation and importance.
-2.  **Model Selection & Training:**
-    -   Experimented with multiple regression models, including **Linear Regression, Ridge Regression, Lasso Regression, Random Forest, and KNN Regression**.\
-    -   Tuned hyperparameters using cross-validation for optimal performance.
-3.  **Feature Engineering:**
-    -   Identified key explanatory variables such as **count_hh4** (household size) and **count_G** (order count), which showed a strong correlation with **log_total**.\
-    -   Considered interactions between income level and purchasing frequency to refine the model.
+1. **Data Preprocessing:**
+   - Cleaned and handled missing values.
+   - Normalized and transformed variables where necessary.
+   - Selected relevant features based on correlation and importance.
+2. **Model Selection and Training:**
+   - Experimented with linear regression, ridge regression, lasso regression, random forest, and KNN regression.
+   - Tuned hyperparameters using cross-validation for optimal performance.
+3. **Feature Engineering:**
+   - Identified key explanatory variables such as **count_hh4** and **count_G**, which showed strong correlation with **log_total**.
+   - Considered interactions between income level and purchasing frequency to refine the model.
 
 ## Outcome
 
 The final model selected was a **Random Forest regression model**, which achieved:
 
--   **Root Mean Squared Error (RMSE):** **0.1128934**\
+- **Root Mean Squared Error (RMSE):** **0.1128934**
+- **Standard Error (SE):** **0.003002182**
+- **R-squared Score:** *Higher than 0.9587, indicating strong predictive power.*
+- Household size, order count, and income level were significant predictors of Amazon purchases.
+- KNN regression was tested but did not outperform tree-based models in terms of accuracy.
 
--   **Standard Error (SE):** **0.003002182**\
+### Links
 
--   **R² Score:** *Higher than 0.9587, indicating strong predictive power.*
+**Project Repository:** <a href="https://github.com/kunfupen/Amazon-Purchase-Predictor-Regression-Model" class="blue-text">GitHub - Amazon Purchase Predictor</a>
 
--   The results confirmed that **household size, order count, and income level were significant predictors** of Amazon purchases.\
-
--   **KNN regression was tested but did not outperform tree-based models in terms of accuracy.**
-
-### **Links**
-
-📂 **Project Repository:** <a href="https://github.com/kunfupen/Amazon-Purchase-Predictor-Regression-Model" class="blue-text">GitHub - Amazon Purchase Predictor</a>
-
-📑 **Final Report:** <a href="Kaggle Report Submission - regression.pdf" class="blue-text">PDF Report</a>
+**Final Report:** <a href="Kaggle Report Submission - regression.pdf" class="blue-text">PDF Report</a>
 
 <div class="project-nav-flex">
-[→ Next Project](project_2.qmd){.next-arrow}
-
+[Next Project](project_2.qmd){.next-arrow}
 </div>
 
 </div>
-
-
