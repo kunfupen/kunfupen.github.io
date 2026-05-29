@@ -21,7 +21,7 @@ css: styles.css
 body-classes: about-page
 ---
 
-I am an incoming master's student at the University of Southern California studying Applied Data Science. I completed my bachelor's degree in Statistics and Data Science at UCLA.
+I am a second-year master's student at the University of Southern California studying Applied Data Science. I completed my bachelor's degree in Statistics and Data Science at UCLA.
 
 I am actively seeking a career in Data Science or related fields.
 
