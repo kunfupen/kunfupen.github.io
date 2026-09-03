@@ -1,98 +1,440 @@
 ---
-format: html
-css: styles.css
-body-classes: index
+pagetitle: "Khang Thai — Data Scientist"
+title-prefix: ""
+description-meta: "M.S. Applied Data Science at USC. I build retrieval-augmented and agentic AI systems, predictive models, and the statistics behind them."
+body-classes: landing
+page-layout: custom
+toc: false
 ---
 
 ```{=html}
-<div class="hero-section">
-<div class="hero-copy">
-<h1 class="hero-title">Welcome</h1>
-<div class="hero-actions">
-<a href="#about" class="button primary">About Me</a>
-<a href="projects.html" class="button secondary">Projects</a>
-</div>
-</div>
-<a href="#about" class="scroll-down" aria-label="Scroll to profile"><i class="bi bi-chevron-down"></i></a>
-</div>
-```
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero" id="top">
+  <div class="hero-media"></div>
+  <div class="hero-scrim"></div>
 
-<div class="home-container" id="about">
-  <img src="profile_pic.jpeg" alt="Khang Thai" class="profile-img">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <p class="status"><span class="pulse"></span> Open to data science &amp; ML roles</p>
 
-  <div>
+      <h1>Khang&nbsp;Thai</h1>
 
-## About Me
+      <p class="hero-tagline">
+        I build <span class="grad">retrieval and agentic AI systems</span> that turn dense technical archives into answers people can trust.
+      </p>
 
-```{=html}
-<div class="social-icons">
-<a href="Khang_Thai_Resume.pdf" aria-label="Resume">
-<i class="bi bi-file-earmark-text"></i>
-</a>
-<a href="mailto:khangthai348@gmail.com" aria-label="Email">
-<i class="bi bi-envelope"></i>
-</a>
-<a href="https://www.linkedin.com/in/khang-thai-361651203/" aria-label="LinkedIn">
-<i class="bi bi-linkedin"></i>
-</a>
-<a href="https://github.com/kunfupen" aria-label="GitHub">
-<i class="bi bi-github"></i>
-</a>
-</div>
-```
+      <p class="hero-sub">
+        Master's student in Applied Data Science at USC, bioinformatics intern at Hologic,
+        and a statistician by training — working where rigorous modeling meets production AI.
+      </p>
 
-My name is Khang Thai. I am a second-year master's student at the University of Southern California studying Applied Data Science. I completed my bachelor's degree in Statistics and Data Science at UCLA.
+      <div class="hero-actions">
+        <a class="btn-solid" href="#projects"><i class="bi bi-grid-1x2"></i> View my work</a>
+        <a class="btn-ghost" href="Khang_Thai_Resume.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-text"></i> Resume</a>
+      </div>
 
-I am actively seeking a career in Data Science or related fields.
+      <ul class="social">
+        <li><a href="mailto:khangthai348@gmail.com" aria-label="Email Khang"><i class="bi bi-envelope"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/khang-thai-361651203/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+        <li><a href="https://github.com/kunfupen" aria-label="GitHub"><i class="bi bi-github"></i></a></li>
+      </ul>
+    </div>
 
-## Education
+    <div class="hero-portrait">
+      <div class="frame">
+        <img src="assets/profile.jpg" alt="Portrait of Khang Thai" width="1100" height="1375">
+      </div>
+      <div class="portrait-tag">
+        <span class="ico"><i class="bi bi-cpu"></i></span>
+        <span>
+          <span class="k">Currently</span>
+          <span class="v">Bioinformatics Intern · Hologic</span>
+        </span>
+      </div>
+    </div>
+  </div>
 
-University of Southern California | M.S. [[Applied Data Science](https://datascience.usc.edu/academics/master-of-science-in-applied-data-science/)]{.blue-text} | Aug 2025 - May 2027
+</section>
 
-University of California, Los Angeles | B.S. [[Statistics and Data Science](https://statistics.ucla.edu/index.php/academics/undergraduate/statistics-major-worksheets/)]{.blue-text} | Sept 2023 - June 2025
-
-San Diego Miramar College | San Diego, CA | Aug 2021 - May 2023
-
-## Experience
-
-Hologic Inc. | Bioinformatics Intern | June 2026 - Sept 2026
-
-NeverEnding, Inc. | Software Developer Backend Intern | May 2024 - Aug 2024
-
-## Skills
-
-#### Languages
-
-<div class="tech-group">
-  <span class="tech-box">Python</span>
-  <span class="tech-box">R</span>
-  <span class="tech-box">SQL</span>
-  <span class="tech-box">Java</span>
-  <span class="tech-box">C++</span>
-  <span class="tech-box">JavaScript</span>
-  <span class="tech-box">Dart</span>
-</div>
-
-#### Technologies/Frameworks
-
-<div class="tech-group">
-  <span class="tech-box ai-skill">AI Tools</span>
-  <span class="tech-box ai-skill">Agentic AI Workflows</span>
-  <span class="tech-box">Microsoft Office</span>
-  <span class="tech-box">NumPy</span>
-  <span class="tech-box">Pandas</span>
-  <span class="tech-box">PostgreSQL</span>
-  <span class="tech-box">MySQL</span>
-  <span class="tech-box">Stata</span>
-  <span class="tech-box">Tableau</span>
-  <span class="tech-box">Flutter</span>
-  <span class="tech-box">React</span>
-  <span class="tech-box">Jira</span>
-  <span class="tech-box">GitHub</span>
-  <span class="tech-box">Git</span>
-  <span class="tech-box">VS Code</span>
-  <span class="tech-box">RStudio</span>
-</div>
-
+<!-- ═══════════════ STATS ═══════════════ -->
+<div class="wrap">
+  <div class="stats reveal">
+    <div class="stat">
+      <div class="num"><span data-count="16" data-suffix="K+">16K+</span></div>
+      <span class="lbl">Controlled assay document chunks indexed for retrieval</span>
+    </div>
+    <div class="stat">
+      <div class="num"><span data-count="0.99" data-decimals="2">0.99</span></div>
+      <span class="lbl">ROC-AUC on the diabetes risk classifier</span>
+    </div>
+    <div class="stat">
+      <div class="num"><span data-count="9.5" data-decimals="1" data-suffix="K">9.5K</span></div>
+      <span class="lbl">Clinical records cleaned, modeled and validated</span>
+    </div>
+    <div class="stat">
+      <div class="num"><span data-count="4">4</span></div>
+      <span class="lbl">Shipped projects across ML, NLP and backend</span>
+    </div>
   </div>
 </div>
+
+<!-- ═══════════════ ABOUT ═══════════════ -->
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="reveal">
+        <p class="eyebrow">About</p>
+        <h2 class="section-title">Statistics as the foundation, AI systems as the craft.</h2>
+
+        <div class="prose" style="margin-top:1.6rem">
+          <p>
+            I'm a second-year master's student in <strong>Applied Data Science at the University of Southern
+            California</strong>, and I finished my B.S. in Statistics and Data Science at <strong>UCLA</strong> in 2025.
+            My training is classical — regression, model diagnostics, cross-validation, knowing when a result is real —
+            and I've spent the last year pushing that foundation into applied AI.
+          </p>
+          <p>
+            At <strong>Hologic</strong> I architected a hybrid retrieval pipeline that pairs dense vector search with
+            lexical matching and neural reranking across a regulated assay-document corpus, then wrapped it in an
+            <em>agentic orchestration layer</em> with human-in-the-loop approval gates and schema validation. In a
+            bioinformatics setting a confident wrong answer is worse than no answer, so most of the engineering went
+            into making the system say what it actually knows.
+          </p>
+          <p>
+            Before that I built payment and subscription backends at a startup — which is where I learned that a model
+            only matters once someone can rely on it. That's the thread through everything here: careful statistics,
+            systems that hold up outside the notebook, and results a non-technical reader can act on.
+          </p>
+        </div>
+      </div>
+
+      <div class="facts reveal" data-delay="120">
+        <dl>
+          <div>
+            <dt>Based in</dt>
+            <dd>San Diego &amp; Los Angeles, CA</dd>
+          </div>
+          <div class="divider"></div>
+          <div>
+            <dt>Currently</dt>
+            <dd>Bioinformatics Intern @ Hologic</dd>
+          </div>
+          <div class="divider"></div>
+          <div>
+            <dt>Studying</dt>
+            <dd>M.S. Applied Data Science, USC — 2027</dd>
+          </div>
+          <div class="divider"></div>
+          <div>
+            <dt>Focus areas</dt>
+            <dd>RAG · Agentic workflows · Predictive modeling</dd>
+          </div>
+          <div class="divider"></div>
+          <div>
+            <dt>Open to</dt>
+            <dd>Data science, ML and AI engineering roles</dd>
+          </div>
+          <div class="divider"></div>
+          <div>
+            <dt>Reach me</dt>
+            <dd><a href="mailto:khangthai348@gmail.com">khangthai348@gmail.com</a></dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ EXPERIENCE ═══════════════ -->
+<section class="section" id="experience">
+  <div class="wrap section-inner">
+    <div class="section-head reveal">
+      <p class="eyebrow">Experience</p>
+      <h2 class="section-title">Where I've built things</h2>
+      <p class="section-lede">Two internships, two very different problems: making a regulated document corpus
+      answerable, and making money move reliably.</p>
+    </div>
+
+    <div class="timeline">
+      <article class="tl-item reveal">
+        <div class="tl-top">
+          <div>
+            <h3 class="tl-role">Bioinformatics Intern</h3>
+            <span class="tl-org">Hologic, Inc.</span>
+          </div>
+          <div class="tl-when">
+            June 2026 — Present
+            <span class="place">San Diego, CA</span>
+          </div>
+        </div>
+        <ul>
+          <li>Architected a <strong>hybrid Retrieval-Augmented Generation pipeline</strong> combining dense vector
+          search (Qdrant), lexical BM25 matching, and cross-encoder neural reranking (bge-reranker) across
+          <strong>16,000+ controlled assay document chunks</strong>.</li>
+          <li>Built an <strong>agentic orchestration layer</strong> with LangGraph to manage stateful multi-step
+          reasoning, dynamic tool selection, and automated fallback routing across complex document analysis tasks.</li>
+          <li>Implemented <strong>human-in-the-loop approval gates</strong> and structured Pydantic schema validation
+          to mitigate hallucinations and meet rigorous bioinformatics regulatory standards.</li>
+          <li>Designed scalable document ingestion and indexing microservices, streamlining processing workflows and
+          accelerating knowledge discovery across internal assay datasets.</li>
+        </ul>
+        <div class="chips">
+          <span class="chip hot">LangGraph</span>
+          <span class="chip hot">Hybrid RAG</span>
+          <span class="chip">Qdrant</span>
+          <span class="chip">BM25</span>
+          <span class="chip">Cross-Encoder Reranking</span>
+          <span class="chip">Pydantic</span>
+          <span class="chip">FastAPI</span>
+          <span class="chip">Python</span>
+        </div>
+      </article>
+
+      <article class="tl-item reveal" data-delay="90">
+        <div class="tl-top">
+          <div>
+            <h3 class="tl-role">Software Development Backend Intern</h3>
+            <span class="tl-org">NeverEnding, Inc.</span>
+          </div>
+          <div class="tl-when">
+            May 2024 — Aug 2024
+            <span class="place">Remote</span>
+          </div>
+        </div>
+        <ul>
+          <li>Engineered secure backend payment systems in Python, integrating the <strong>Stripe API</strong> to manage
+          subscription and transaction workflows.</li>
+          <li>Designed and deployed scalable database schemas using <strong>Django</strong> and JSON to manage user
+          accounts and digital gifting services.</li>
+          <li>Collaborated across teams using Agile methodologies in Jira to build, test, and ship responsive web
+          features via GitHub.</li>
+        </ul>
+        <div class="chips">
+          <span class="chip">Python</span>
+          <span class="chip">Django</span>
+          <span class="chip">Stripe API</span>
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">Jira</span>
+          <span class="chip">Git</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PROJECTS ═══════════════ -->
+<section class="section" id="projects">
+  <div class="wrap section-inner">
+    <div class="section-head reveal">
+      <p class="eyebrow">Selected work</p>
+      <h2 class="section-title">Projects</h2>
+      <p class="section-lede">Predictive modeling, NLP, dashboards and backend systems — each one written up with the
+      process, the numbers, and the limitations.</p>
+    </div>
+
+    <div class="proj-grid">
+      <a class="proj-card reveal" href="projects/diabetes-risk-model.html">
+        <div class="proj-thumb">
+          <img src="projects/diabetes-risk-model.svg" alt="ROC curve illustration for the diabetes risk model" loading="lazy">
+          <span class="proj-date">Mar 2025</span>
+        </div>
+        <div class="proj-body">
+          <h3>Diabetes Risk Predictive Modeling</h3>
+          <p>A logistic regression pipeline over 9,538 clinical records that flags high-risk patients at 97% accuracy
+          and 0.99 AUC — with the diagnostics to back it up.</p>
+          <div class="chips">
+            <span class="chip">R</span><span class="chip">Logistic Regression</span><span class="chip">Cross-Validation</span>
+          </div>
+          <span class="proj-more">Read the write-up <i class="bi bi-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <a class="proj-card reveal" data-delay="90" href="projects/la-airbnb-analysis.html">
+        <div class="proj-thumb">
+          <img src="projects/la-airbnb-analysis.svg" alt="Topic bars and a scatter of Los Angeles listings" loading="lazy">
+          <span class="proj-date">May 2024</span>
+        </div>
+        <div class="proj-body">
+          <h3>LA Airbnb Analysis</h3>
+          <p>NLP topic modeling on guest reviews plus a random forest on Superhost status, shipped as an interactive
+          Tableau dashboard for hosts.</p>
+          <div class="chips">
+            <span class="chip">R</span><span class="chip">NLP · LDA</span><span class="chip">Tableau</span>
+          </div>
+          <span class="proj-more">Read the write-up <i class="bi bi-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <a class="proj-card reveal" href="projects/amazon-purchase-predictor.html">
+        <div class="proj-thumb">
+          <img src="projects/amazon-purchase-predictor.svg" alt="Scatter plot with a fitted regression line" loading="lazy">
+          <span class="proj-date">Jul 2024</span>
+        </div>
+        <div class="proj-body">
+          <h3>Amazon Purchase Predictor</h3>
+          <p>A five-model bake-off on customer spending, won by a random forest at RMSE 0.113 — with the feature work
+          that got it there.</p>
+          <div class="chips">
+            <span class="chip">R</span><span class="chip">Random Forest</span><span class="chip">Caret</span>
+          </div>
+          <span class="proj-more">Read the write-up <i class="bi bi-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <a class="proj-card reveal" data-delay="90" href="projects/task-manager.html">
+        <div class="proj-thumb">
+          <img src="projects/task-manager.svg" alt="Database rows mapped to CRUD operations" loading="lazy">
+          <span class="proj-date">Jan 2025</span>
+        </div>
+        <div class="proj-body">
+          <h3>Task Manager</h3>
+          <p>A Java and PostgreSQL task manager over JDBC — full CRUD, prepared statements, and a schema designed from
+          scratch.</p>
+          <div class="chips">
+            <span class="chip">Java</span><span class="chip">PostgreSQL</span><span class="chip">JDBC</span>
+          </div>
+          <span class="proj-more">Read the write-up <i class="bi bi-arrow-right"></i></span>
+        </div>
+      </a>
+    </div>
+
+    <div class="hero-actions reveal" style="margin-top:2.2rem">
+      <a class="btn-ghost" href="projects.html">All projects <i class="bi bi-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SKILLS ═══════════════ -->
+<section class="section" id="skills">
+  <div class="wrap section-inner">
+    <div class="section-head reveal">
+      <p class="eyebrow">Toolkit</p>
+      <h2 class="section-title">What I work with</h2>
+    </div>
+
+    <div class="skill-grid">
+      <div class="skill-card reveal">
+        <h3><span class="ico"><i class="bi bi-stars"></i></span> AI &amp; Machine Learning</h3>
+        <div class="chips">
+          <span class="chip hot">Large Language Models</span>
+          <span class="chip hot">Hybrid RAG (Dense + BM25)</span>
+          <span class="chip hot">Cross-Encoder Reranking</span>
+          <span class="chip hot">Agentic Workflows</span>
+          <span class="chip hot">Multi-Agent Orchestration</span>
+          <span class="chip">Structured Schema Validation</span>
+          <span class="chip">Prompt Engineering</span>
+          <span class="chip">NLP</span>
+          <span class="chip">Supervised &amp; Unsupervised Learning</span>
+          <span class="chip">Statistical Modeling</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal" data-delay="80">
+        <h3><span class="ico"><i class="bi bi-boxes"></i></span> Frameworks &amp; Libraries</h3>
+        <div class="chips">
+          <span class="chip">LangGraph</span>
+          <span class="chip">LangChain</span>
+          <span class="chip">PyTorch</span>
+          <span class="chip">Scikit-Learn</span>
+          <span class="chip">Pydantic</span>
+          <span class="chip">FastAPI</span>
+          <span class="chip">Django</span>
+          <span class="chip">Tidyverse</span>
+          <span class="chip">Caret</span>
+          <span class="chip">ggplot2</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal" data-delay="120">
+        <h3><span class="ico"><i class="bi bi-database"></i></span> Databases &amp; Vector Search</h3>
+        <div class="chips">
+          <span class="chip">Qdrant</span>
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">MySQL</span>
+          <span class="chip">JDBC</span>
+        </div>
+      </div>
+
+      <div class="skill-card reveal" data-delay="160">
+        <h3><span class="ico"><i class="bi bi-terminal"></i></span> Languages, Tools &amp; Platforms</h3>
+        <div class="chips">
+          <span class="chip">Python</span>
+          <span class="chip">R</span>
+          <span class="chip">SQL</span>
+          <span class="chip">Java</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">Git</span>
+          <span class="chip">Docker</span>
+          <span class="chip">Linux / Bash</span>
+          <span class="chip">Jira</span>
+          <span class="chip">Tableau</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ EDUCATION ═══════════════ -->
+<section class="section" id="education">
+  <div class="wrap section-inner">
+    <div class="section-head reveal">
+      <p class="eyebrow">Education</p>
+      <h2 class="section-title">Training</h2>
+    </div>
+
+    <div class="edu-grid">
+      <article class="edu-item reveal">
+        <div>
+          <h3>University of Southern California</h3>
+          <p class="deg">M.S. <a href="https://datascience.usc.edu/academics/master-of-science-in-applied-data-science/">Applied Data Science</a></p>
+          <p class="course"><span>Coursework:</span> Machine Learning · Data Management · Deep Learning</p>
+        </div>
+        <div class="tl-when">Aug 2025 — May 2027<span class="place">Los Angeles, CA</span></div>
+      </article>
+
+      <article class="edu-item reveal" data-delay="80">
+        <div>
+          <h3>University of California, Los Angeles</h3>
+          <p class="deg">B.S. <a href="https://statistics.ucla.edu/index.php/academics/undergraduate/statistics-major-worksheets/">Statistics and Data Science</a></p>
+          <p class="course"><span>Coursework:</span> Statistical Models &amp; Data Mining · Data Analysis and Regression ·
+          Computation &amp; Optimization for Statistics · Monte Carlo Methods · Statistical Programming with R ·
+          Python for Data Science · Statistical Consulting · Databases</p>
+        </div>
+        <div class="tl-when">Sep 2023 — Jun 2025<span class="place">Los Angeles, CA</span></div>
+      </article>
+
+      <article class="edu-item reveal" data-delay="120">
+        <div>
+          <h3>San Diego Miramar College</h3>
+          <p class="deg">Associate of Science</p>
+          <p class="course"><span>Honors:</span> Dean's List, 2021 – 2023</p>
+        </div>
+        <div class="tl-when">Aug 2021 — May 2023<span class="place">San Diego, CA</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CONTACT ═══════════════ -->
+<section class="section" id="contact">
+  <div class="wrap section-inner">
+    <div class="cta reveal">
+      <p class="eyebrow">Contact</p>
+      <h2>Let's build something worth trusting.</h2>
+      <p>I'm looking for data science, machine learning and AI engineering roles — and I'm always happy to talk
+      about retrieval systems, model validation, or a dataset you can't quite crack.</p>
+
+      <div class="hero-actions">
+        <a class="btn-solid" href="mailto:khangthai348@gmail.com"><i class="bi bi-send"></i> Get in touch</a>
+        <a class="btn-ghost" href="Khang_Thai_Resume.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-arrow-down"></i> Download resume</a>
+      </div>
+
+      <ul class="social">
+        <li><a href="mailto:khangthai348@gmail.com" aria-label="Email Khang"><i class="bi bi-envelope"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/khang-thai-361651203/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
+        <li><a href="https://github.com/kunfupen" aria-label="GitHub"><i class="bi bi-github"></i></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+```

@@ -1,0 +1,107 @@
+---
+title: "Diabetes Risk Predictive Modeling"
+description: "A logistic regression pipeline over 9,538 clinical records that flags high-risk patients at 97% accuracy and 0.99 AUC."
+date: "2025-03-20"
+author: "Khang Thai"
+image: "diabetes-risk-model.svg"
+body-classes: page-project
+page-layout: custom
+toc: false
+---
+
+```{=html}
+<div class="project-tags">
+  <div class="chips">
+    <span class="chip hot">R</span>
+    <span class="chip">Logistic Regression</span>
+    <span class="chip">Stepwise Selection</span>
+    <span class="chip">5-Fold Cross-Validation</span>
+    <span class="chip">Tidyverse</span>
+    <span class="chip">ggplot2</span>
+  </div>
+</div>
+
+<div class="project-content">
+
+<p class="lede-para">
+  Roughly one in ten American adults lives with diabetes, and a large share of them are undiagnosed. This project asks a
+  narrow, tractable version of that problem: given routine clinical measurements, how accurately can we flag someone as
+  high-risk — and which measurements are actually doing the work?
+</p>
+
+<div class="results">
+  <div class="result"><span class="num">97%</span><span class="lbl">Test-set accuracy</span></div>
+  <div class="result"><span class="num">0.99</span><span class="lbl">ROC-AUC</span></div>
+  <div class="result"><span class="num">9,538</span><span class="lbl">Patient records</span></div>
+  <div class="result"><span class="num">4</span><span class="lbl">Final predictors</span></div>
+</div>
+
+<h2>Data and preprocessing</h2>
+
+<p>
+  The dataset holds 9,538 medical records with demographic, lifestyle and biometric fields. It arrived unusually clean —
+  no missing values and no outliers worth removing — so preprocessing focused on the relationships between variables
+  rather than repair work.
+</p>
+
+<ul>
+  <li>Checked multicollinearity with <strong>Variance Inflation Factor</strong>, which flagged fasting glucose and HbA1c
+  as strongly correlated. Glucose was dropped: HbA1c carries a longer-horizon signal and is the more clinically stable
+  of the two.</li>
+  <li>Standardized numeric predictors and encoded categorical fields with the Tidyverse.</li>
+</ul>
+
+<h2>Feature selection</h2>
+
+<ul>
+  <li>Ran <strong>stepwise regression</strong> to narrow the predictor set.</li>
+  <li>Settled on four variables: <strong>age, BMI, HbA1c, and family history</strong>.</li>
+  <li>Confirmed with <strong>ANOVA</strong> that the reduced model performed comparably to the full model — the extra
+  predictors were not earning their complexity.</li>
+</ul>
+
+<h2>Modeling and evaluation</h2>
+
+<ul>
+  <li>Fit <strong>logistic regression</strong> as the primary classifier on a 70/30 train-test split.</li>
+  <li>Confusion matrix on held-out data: <strong>97% accuracy</strong>, with high recall on positive cases — the metric
+  that matters most for a screening tool, where a missed case costs more than a false alarm.</li>
+  <li><strong>5-fold cross-validation</strong> returned RMSE 0.146, R² 0.906 and MAE 0.04, indicating the fit was stable
+  rather than a lucky split.</li>
+  <li>The ROC curve yielded an <strong>AUC of 0.99</strong>.</li>
+</ul>
+
+<h2>What the model says</h2>
+
+<ul>
+  <li><strong>HbA1c, BMI and age</strong> are the dominant predictors, with family history acting as a modifier rather
+  than a driver on its own.</li>
+  <li>Examining family history across age bands showed the effect concentrating in older cohorts.</li>
+  <li>The BMI × HbA1c interaction is where risk compounds: elevated metabolic indicators together shift diagnosis
+  likelihood far more than either does alone.</li>
+  <li>Practically, this argues for monitoring metabolic health early rather than screening on age alone.</li>
+</ul>
+
+<h2>Limitations</h2>
+
+<ul>
+  <li>The dataset carries no diet, exercise, or socioeconomic variables — all of which are known confounders.</li>
+  <li>Measurement practices vary across clinical sites, which introduces noise the model can't see.</li>
+  <li>97% accuracy on a clean secondary dataset is not 97% accuracy in a clinic. This is a modeling exercise, not a
+  diagnostic tool.</li>
+  <li>Next steps I'd take: gender-specific risk profiles, BMI × gender interactions, and validation on an external
+  cohort.</li>
+</ul>
+
+<div class="link-row">
+  <a class="file-link" href="https://github.com/kunfupen/Diabetes-Research-Project"><i class="bi bi-github"></i> Project repository</a>
+  <a class="file-link" href="Diabetes Research Report.pdf"><i class="bi bi-file-earmark-pdf"></i> Full report (PDF)</a>
+</div>
+
+<nav class="project-nav">
+  <a class="prev" href="task-manager.html"><i class="bi bi-arrow-left"></i> Task Manager</a>
+  <a class="next" href="../projects.html">All projects <i class="bi bi-arrow-right"></i></a>
+</nav>
+
+</div>
+```

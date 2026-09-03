@@ -1,0 +1,74 @@
+---
+title: "Task Manager"
+description: "A Java and PostgreSQL task manager over JDBC — full CRUD, prepared statements, and a schema designed from scratch."
+date: "2025-01-26"
+author: "Khang Thai"
+image: "task-manager.svg"
+body-classes: page-project
+page-layout: custom
+toc: false
+---
+
+```{=html}
+<div class="project-tags">
+  <div class="chips">
+    <span class="chip hot">Java</span>
+    <span class="chip">PostgreSQL</span>
+    <span class="chip">JDBC</span>
+    <span class="chip">SQL</span>
+  </div>
+</div>
+
+<div class="project-content">
+
+<p class="lede-para">
+  A deliberately small project with a deliberate purpose: build the database layer by hand. No ORM, no framework —
+  just Java, JDBC, and a PostgreSQL schema I designed myself, so that every query and every connection is something I
+  had to reason about.
+</p>
+
+<h2>Schema design</h2>
+
+<ul>
+  <li>Designed a PostgreSQL <code>tasks</code> table with columns for task ID, name, description, due date and status.</li>
+  <li>Chose types and constraints up front rather than letting a migration tool decide them.</li>
+</ul>
+
+<h2>JDBC integration</h2>
+
+<ul>
+  <li>Established the JDBC connection and wrote the SQL for insert, select, update and delete directly.</li>
+  <li>Used <strong>prepared statements throughout</strong> — parameterized queries, so user input never reaches the
+  database as concatenated SQL. This is the whole reason to write the layer by hand: SQL injection stops being an
+  abstract lesson.</li>
+</ul>
+
+<h2>Application</h2>
+
+<ul>
+  <li><strong>Add</strong> a task with name, description, due date and status.</li>
+  <li><strong>View</strong> every task currently persisted.</li>
+  <li><strong>Update</strong> a task's name or status.</li>
+  <li><strong>Delete</strong> a task permanently.</li>
+  <li>Wrapped in a console interface that prompts for each operation.</li>
+</ul>
+
+<h2>Where it goes next</h2>
+
+<p>
+  The natural extensions are user authentication, filtering and sorting on the query side, and a real front end. The
+  backend is already structured so that swapping the console for an HTTP layer would not require rewriting the data
+  access code.
+</p>
+
+<div class="link-row">
+  <a class="file-link" href="https://github.com/kunfupen/todo-list"><i class="bi bi-github"></i> Project repository</a>
+</div>
+
+<nav class="project-nav">
+  <a class="prev" href="la-airbnb-analysis.html"><i class="bi bi-arrow-left"></i> LA Airbnb Analysis</a>
+  <a class="next" href="diabetes-risk-model.html">Diabetes Risk Model <i class="bi bi-arrow-right"></i></a>
+</nav>
+
+</div>
+```

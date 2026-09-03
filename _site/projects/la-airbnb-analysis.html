@@ -6,9 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Selected data science and software projects by Khang Thai: predictive modeling, NLP, dashboards, and backend systems.">
+<meta name="author" content="Khang Thai">
+<meta name="dcterms.date" content="2024-05-29">
+<meta name="description" content="NLP topic modeling on guest reviews plus a random forest on Superhost status, shipped as an interactive Tableau dashboard.">
 
-<title>Projects – Khang Thai</title>
+<title>LA Airbnb Analysis – Khang Thai</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,19 +27,17 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<link href="./assets/favicon.svg" rel="icon" type="image/svg+xml">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-80699bfb3ee756a72ca11f886bdbae3f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-184cf89db84c4f6c1844cebeb57f6dd4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-80699bfb3ee756a72ca11f886bdbae3f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-184cf89db84c4f6c1844cebeb57f6dd4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -53,55 +53,28 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-project-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-image','listing-title','listing-description','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-project-listing'] = new List('listing-project-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>html{ scroll-behavior: smooth; }</style>
-<link rel="preload" href="./assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin="">
-<link rel="preload" href="./assets/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin="">
-<link rel="stylesheet" href="./assets/fonts.css">
+<link rel="preload" href="../assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="../assets/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="stylesheet" href="../assets/fonts.css">
 <meta name="theme-color" content="#060a12">
 <meta name="author" content="Khang Thai">
 
 
-<meta property="og:title" content="Projects">
+<meta property="og:title" content="LA Airbnb Analysis – Khang Thai">
+<meta property="og:description" content="NLP topic modeling on guest reviews plus a random forest on Superhost status, shipped as an interactive Tableau dashboard.">
+<meta property="og:image" content="https://khang-thai.netlify.app/projects/la-airbnb-analysis.svg">
 <meta property="og:site_name" content="Khang Thai">
 </head>
 
-<body class="nav-fixed page-projects fullcontent">
+<body class="nav-fixed page-project fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Khang Thai</span>
     </a>
   </div>
@@ -111,23 +84,23 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html#about"> 
+    <a class="nav-link" href="../index.html#about"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./index.html#experience"> 
+    <a class="nav-link" href="../index.html#experience"> 
 <span class="menu-text">Experience</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+    <a class="nav-link" href="../projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./index.html#contact"> 
+    <a class="nav-link" href="../index.html#contact"> 
 <span class="menu-text">Contact</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Khang_Thai_Resume.pdf" rel="noopener" target="_blank"> 
+    <a class="nav-link" href="../Khang_Thai_Resume.pdf" rel="noopener" target="_blank"> 
 <span class="menu-text">Resume</span></a>
   </li>  
 </ul>
@@ -143,127 +116,131 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
 <!-- main -->
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">LA Airbnb Analysis</h1>
+</div>
 
-
-
-<div class="page-head">
-  <div class="wrap">
-    <p class="eyebrow">Portfolio</p>
-    <h1>Projects</h1>
-    <p class="section-lede">
-      Selected work across predictive modeling, natural language processing, dashboards, and backend
-      software. Every project is written up end to end — the process, the numbers, and what I'd do differently.
-    </p>
+<div>
+  <div class="description">
+    NLP topic modeling on guest reviews plus a random forest on Superhost status, shipped as an interactive Tableau dashboard.
   </div>
 </div>
 
-<div class="wrap">
-  <div class="filter-bar" aria-label="Filter projects by year">
-    <button type="button" class="filter-chip active" data-year="all">All</button>
-    <button type="button" class="filter-chip" data-year="2025">2025</button>
-    <button type="button" class="filter-chip" data-year="2024">2024</button>
-    <p class="filter-count" aria-live="polite"></p>
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Khang Thai </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 29, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="project-tags">
+  <div class="chips">
+    <span class="chip hot">R</span>
+    <span class="chip">NLP</span>
+    <span class="chip">Latent Dirichlet Allocation</span>
+    <span class="chip">Random Forest</span>
+    <span class="chip">Logistic Regression</span>
+    <span class="chip">Tableau</span>
   </div>
 </div>
-<div class="wrap">
-<div id="listing-project-listing" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-2">
-<div class="g-col-1" data-index="0" data-listing-date-sort="1742428800000" data-listing-file-modified-sort="1788476410738" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="525">
-<a href="./projects/diabetes-risk-model.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./projects/diabetes-risk-model.svg" class="thumbnail-image card-img" style="height: 100%;">
+
+<div class="project-content">
+
+<p class="lede-para">
+  Two questions drive this project, and they need different tools. <em>What makes a Los Angeles host a Superhost?</em> is
+  a classification problem. <em>What are guests actually complaining about?</em> is buried in unstructured review text.
+  The answers meet in a dashboard a host can filter for themselves.
 </p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Diabetes Risk Predictive Modeling
-</h5>
-<div class="card-text listing-description">
-A logistic regression pipeline over 9,538 clinical records that flags high-risk patients at 97% accuracy and 0.99 AUC.
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Mar 20, 2025
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-date-sort="1737849600000" data-listing-file-modified-sort="1788476410738" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="278">
-<a href="./projects/task-manager.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./projects/task-manager.svg" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Task Manager
-</h5>
-<div class="card-text listing-description">
-A Java and PostgreSQL task manager over JDBC — full CRUD, prepared statements, and a schema designed from scratch.
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Jan 26, 2025
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-date-sort="1722124800000" data-listing-file-modified-sort="1788476410738" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="387">
-<a href="./projects/amazon-purchase-predictor.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./projects/amazon-purchase-predictor.svg" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Amazon Purchase Predictor
-</h5>
-<div class="card-text listing-description">
-A five-model bake-off on customer spending, won by a random forest at RMSE 0.113.
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-Jul 28, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-date-sort="1716940800000" data-listing-file-modified-sort="1788476410738" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="508">
-<a href="./projects/la-airbnb-analysis.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./projects/la-airbnb-analysis.svg" class="thumbnail-image card-img" style="height: 100%;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-LA Airbnb Analysis
-</h5>
-<div class="card-text listing-description">
-NLP topic modeling on guest reviews plus a random forest on Superhost status, shipped as an interactive Tableau dashboard.
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-May 29, 2024
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div>
-<p class="filter-empty" hidden="">No projects from that year.</p>
+
+<div class="results">
+  <div class="result"><span class="num">76%</span><span class="lbl">Random forest accuracy on Superhost status</span></div>
+  <div class="result"><span class="num">74%</span><span class="lbl">Logistic regression accuracy</span></div>
+  <div class="result"><span class="num">2</span><span class="lbl">Datasets joined: listings and reviews</span></div>
 </div>
 
+<h2>Host analysis</h2>
+
+<ul>
+  <li>Modeled Superhost status against response rate, acceptance rate, review scores, profile completeness, and hosting
+  tenure.</li>
+  <li>Compared <strong>logistic regression (74% test accuracy)</strong> against a <strong>random forest (76%)</strong>.
+  The forest won on accuracy; the regression won on explainability, and both agreed on the ranking of drivers.</li>
+  <li>The controllable levers came out on top: <strong>high review scores, acceptance rate, and response rate</strong>.
+  Tenure mattered far less than hosts tend to assume.</li>
+</ul>
+
+<h2>Review analysis with NLP</h2>
+
+<ul>
+  <li>Ran <strong>sentiment analysis</strong> across the review corpus to separate the language of high- and low-rated
+  stays.</li>
+  <li>Used <strong>Latent Dirichlet Allocation</strong> for topic modeling, surfacing the recurring themes behind poor
+  reviews — cleanliness, check-in friction, and gaps between listing photos and reality.</li>
+  <li>These are diagnosable problems. A host who reads "the shower pressure" in their topic weights knows exactly what
+  to fix, in a way a 4.2-star average never tells them.</li>
+</ul>
+
+<h2>Interactive dashboard</h2>
+
+<p>
+  The listings side is published as a Tableau dashboard: price distributions by neighborhood and room type, listing
+  density on a map of LA, and filters for beds, region, Superhost status, price and rating.
+</p>
+
+<div class="tableau-embed">
+  <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+  <tableau-viz id="airbnb-tableau-viz" src="https://public.tableau.com/views/airbnbdashboard_17164968027300/Dashboard1" toolbar="bottom" device="desktop" hide-tabs="">
+  </tableau-viz>
+</div>
+
+<div class="note">
+  <i class="bi bi-info-circle"></i>
+  <p>If the embed does not load in your browser, the dashboard is also live on Tableau Public.</p>
+</div>
+
+<img src="airbnb-dashboard.jpeg" alt="Tableau dashboard showing top expensive LA neighborhoods, listings by region and room type, and a map of listings">
+
+<h2>What I'd tell a host</h2>
+
+<ul>
+  <li>Protect the rating and the response rate before anything else — they are the strongest predictors of Superhost
+  status and the ones fully under a host's control.</li>
+  <li>Treat negative reviews as a topic model, not a tally. The same three or four issues repeat.</li>
+  <li>Price against your neighborhood and room type, not against the LA average — the spread between Beverly Crest and
+  the citywide median is an order of magnitude.</li>
+</ul>
+
+<div class="link-row">
+  <a class="file-link" href="https://github.com/kunfupen/LA-Airbnb-Analysis"><i class="bi bi-github"></i> Project repository</a>
+  <a class="file-link" href="https://public.tableau.com/app/profile/remi.l5319/viz/airbnbdashboard_17164968027300/Dashboard1"><i class="bi bi-bar-chart"></i> Open in Tableau Public</a>
+  <a class="file-link" href="Airbnb Analysis.pdf"><i class="bi bi-file-earmark-pdf"></i> Presentation slides (PDF)</a>
+</div>
+
+<nav class="project-nav">
+  <a class="prev" href="amazon-purchase-predictor.html"><i class="bi bi-arrow-left"></i> Amazon Purchase Predictor</a>
+  <a class="next" href="task-manager.html">Task Manager <i class="bi bi-arrow-right"></i></a>
+</nav>
+
+</div>
 
 
 
@@ -825,5 +802,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
