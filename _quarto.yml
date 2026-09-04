@@ -9,7 +9,7 @@ project:
 website:
   title: "Khang Thai"
   description: "Khang Thai — M.S. Applied Data Science at USC. Building retrieval-augmented and agentic AI systems, predictive models, and data products."
-  site-url: "https://khang-thai.netlify.app"
+  site-url: "https://kunfupen.github.io"
   favicon: assets/favicon.svg
   open-graph: true
   search: false

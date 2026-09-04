@@ -309,11 +309,21 @@ section[id] { scroll-margin-top: calc(var(--nav-h) + 18px); }
   isolation: isolate;
 }
 
+/* The backdrop is an <img> rather than a CSS background so its path stays
+   relative to index.html, which sits at the site root under any base URL. */
 .hero-media {
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: url("/assets/hero.jpg") center 42% / cover no-repeat;
+  overflow: hidden;
+}
+
+.hero-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 42%;
   transform: scale(1.04);
 }
 
@@ -1319,7 +1329,7 @@ footer.footer {
   .hero-portrait { order: -1; justify-self: start; width: min(100%, 250px); }
 
   /* Frame the water rather than the bright sky, and darken it further. */
-  .hero-media { background-position: 50% 72%; }
+  .hero-media img { object-position: 50% 72%; }
 
   .hero-scrim {
     background: linear-gradient(180deg,
