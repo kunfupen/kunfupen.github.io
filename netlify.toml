@@ -1,0 +1,28 @@
+# Netlify builds the site rather than serving a committed folder: _site/ is
+# generated output and is not in the repository. The Netlify image ships no
+# Quarto, so the build fetches a pinned release first.
+#
+# Quarto is unpacked into $HOME, never the repo: its distribution ships .qmd
+# template files, and Quarto would pick those up as project inputs and fail.
+#
+# Keep QUARTO_VERSION in step with .github/workflows/deploy.yml so both hosts
+# render with the same toolchain.
+
+[build]
+  publish = "_site"
+  command = "curl -fsSL -o $HOME/quarto.tar.gz https://github.com/quarto-dev/quarto-cli/releases/download/v$QUARTO_VERSION/quarto-$QUARTO_VERSION-linux-amd64.tar.gz && tar -xzf $HOME/quarto.tar.gz -C $HOME && $HOME/quarto-$QUARTO_VERSION/bin/quarto render"
+
+[build.environment]
+  QUARTO_VERSION = "1.6.42"
+
+# The site is fully static; these just stop the assets from being re-fetched
+# on every navigation. Hashed files under site_libs/ can be cached hard.
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/site_libs/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
