@@ -1,24 +1,61 @@
 project:
   type: website
+  output-dir: _site
+  resources:
+    - "*.pdf"
+    - "projects/*.pdf"
+    - "assets/**"
 
 website:
   title: "Khang Thai"
+  description: "Khang Thai — M.S. Applied Data Science at USC. Building retrieval-augmented and agentic AI systems, predictive models, and data products."
+  site-url: "https://kunfupen.github.io"
+  favicon: assets/favicon.svg
+  open-graph: true
+  search: false
   navbar:
-    background: transparent
+    pinned: true
+    title: "Khang Thai"
     right:
-      - href: index.qmd
-        text: Home
-      - href: projects.qmd
-        text: Projects
+      - text: About
+        href: index.html#about
+      - text: Experience
+        href: index.html#experience
+      - text: Projects
+        href: projects.html
+      - text: Contact
+        href: index.html#contact
+      - text: Resume
+        href: Khang_Thai_Resume.pdf
+        target: _blank
+        rel: noopener
+  page-footer:
+    left: |
+      © 2026 Khang Thai · Built with [Quarto](https://quarto.org)
+    right:
+      - icon: linkedin
+        href: https://www.linkedin.com/in/khang-thai-361651203/
+        aria-label: LinkedIn
+      - icon: github
+        href: https://github.com/kunfupen
+        aria-label: GitHub
+      - icon: envelope
+        href: "mailto:khangthai348@gmail.com"
+        aria-label: Email
+
 format:
   html:
-    theme:
-      - lux
-      - brand
-    css: styles.css
+    theme: theme.scss
     toc: false
+    anchor-sections: false
+    smooth-scroll: true
+    link-external-newwindow: true
+    link-external-icon: false
+    html-math-method: plain
+    include-in-header: head.html
+    include-after-body: assets/site.js.html
 
 editor: visual
 
-execute: 
+execute:
   freeze: auto

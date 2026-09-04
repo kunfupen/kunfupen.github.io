@@ -1,0 +1,89 @@
+---
+title: "Amazon Purchase Predictor"
+description: "A five-model bake-off on customer spending, won by a random forest at RMSE 0.113."
+date: "2024-07-28"
+author: "Khang Thai"
+image: "amazon-purchase-predictor.svg"
+body-classes: page-project
+page-layout: custom
+toc: false
+---
+
+```{=html}
+<div class="project-tags">
+  <div class="chips">
+    <span class="chip hot">R</span>
+    <span class="chip">Random Forest</span>
+    <span class="chip">Ridge &amp; Lasso</span>
+    <span class="chip">KNN Regression</span>
+    <span class="chip">Caret</span>
+    <span class="chip">Tidyverse</span>
+  </div>
+</div>
+
+<div class="project-content">
+
+<p class="lede-para">
+  A Kaggle-style regression problem: predict <code>log_total</code> — total customer spend on a log scale — from
+  demographic and transaction features. The interesting part was not the winning model but how narrow the gap between
+  models turned out to be, and how much of the improvement came from feature work instead.
+</p>
+
+<div class="results">
+  <div class="result"><span class="num">0.113</span><span class="lbl">RMSE (random forest)</span></div>
+  <div class="result"><span class="num">0.003</span><span class="lbl">Standard error</span></div>
+  <div class="result"><span class="num">&gt;0.95</span><span class="lbl">R² on held-out data</span></div>
+  <div class="result"><span class="num">5</span><span class="lbl">Model families compared</span></div>
+</div>
+
+<h2>Preprocessing</h2>
+
+<ul>
+  <li>Handled missing values, then normalized and transformed the skewed spending variables — the log transform on the
+  response is what makes the residuals behave.</li>
+  <li>Screened features on correlation and importance before modeling rather than throwing everything at the wall.</li>
+</ul>
+
+<h2>Model selection</h2>
+
+<ul>
+  <li>Compared <strong>linear regression, ridge, lasso, random forest and KNN regression</strong> under the same
+  cross-validated protocol.</li>
+  <li>Tuned hyperparameters with cross-validation in <strong>caret</strong>, so the comparison was between tuned models
+  rather than default settings.</li>
+  <li><strong>KNN underperformed</strong> the tree-based models — unsurprising given the mix of categorical and
+  count features, where distance metrics get awkward.</li>
+</ul>
+
+<h2>Feature engineering</h2>
+
+<ul>
+  <li>Found <code>count_hh4</code> and <code>count_G</code> — household size and order-count features — to be the
+  strongest correlates of <code>log_total</code>.</li>
+  <li>Tested interactions between income level and purchase frequency, which sharpened the fit for high-frequency
+  households.</li>
+</ul>
+
+<h2>Result</h2>
+
+<ul>
+  <li>The final <strong>random forest</strong> reached <strong>RMSE 0.1129</strong> (SE 0.0030) with R² above 0.9587.</li>
+  <li><strong>Household size, order count, and income level</strong> were the significant predictors of Amazon spend —
+  the model is essentially learning that more people in a household with more orders spend more, and quantifying by
+  how much.</li>
+  <li>Worth naming the limitation: the strong R² partly reflects predictors that are close relatives of the response.
+  It's a good predictive model and a weak causal one.</li>
+</ul>
+
+<div class="link-row">
+  <a class="file-link" href="https://github.com/kunfupen/Amazon-Purchase-Predictor-Regression-Model"><i class="bi bi-github"></i> Project repository</a>
+  <a class="file-link" href="Kaggle Report Submission - regression.pdf"><i class="bi bi-file-earmark-pdf"></i> Full report (PDF)</a>
+</div>
+
+<nav class="project-nav">
+  <a class="prev" href="../projects.html"><i class="bi bi-arrow-left"></i> All projects</a>
+  <a class="next" href="la-airbnb-analysis.html">LA Airbnb Analysis <i class="bi bi-arrow-right"></i></a>
+</nav>
+
+</div>
+```
