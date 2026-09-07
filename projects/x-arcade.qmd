@@ -1,0 +1,104 @@
+---
+title: "X Arcade — Decoy"
+description: "A Grokathon hackathon build: a multiplayer game where you spot the Grok-written reply among four human ones in thirty seconds."
+date: "2026-08-12"
+author: "Khang Thai"
+image: "x-arcade.svg"
+body-classes: page-project
+page-layout: custom
+toc: false
+---
+
+```{=html}
+<div class="project-tags">
+  <div class="chips">
+    <span class="chip hot">Hackathon</span>
+    <span class="chip hot">xAI API</span>
+    <span class="chip">Python</span>
+    <span class="chip">Realtime Multiplayer</span>
+    <span class="chip">LLM Text Generation</span>
+    <span class="chip">Voice &amp; Image Models</span>
+  </div>
+</div>
+
+<div class="project-content">
+
+<p class="lede-para">
+  Built for the <strong>Grokathon</strong>. X Arcade is a retro arcade cabinet for X, and the first cartridge is
+  <em>Decoy</em>: one real post, five replies, four written by people and one written by Grok. You have thirty seconds
+  to spot the machine. It turns out that's much harder than it sounds — which is the whole point.
+</p>
+
+<div class="results">
+  <div class="result"><span class="num">5</span><span class="lbl">Replies per round, one machine-written</span></div>
+  <div class="result"><span class="num">30s</span><span class="lbl">To pick before the timer runs out</span></div>
+  <div class="result"><span class="num">2</span><span class="lbl">Modes: fully offline demo, and live xAI</span></div>
+</div>
+
+<h2>The game</h2>
+
+<ul>
+  <li>Two players join the same room code from separate devices or tabs; the round starts the moment the second
+  player joins.</li>
+  <li>Everyone sees the same post and the same five replies. Tap the one you think the machine wrote.</li>
+  <li>First correct pick takes the round, and the match continues from there.</li>
+</ul>
+
+<h2>The part that mattered: not failing on stage</h2>
+
+<p>
+  A hackathon demo that depends on live API calls is a demo that can die in front of the judges — rate limits, a slow
+  response, conference wifi. So the architecture splits in two:
+</p>
+
+<ul>
+  <li><strong>Demo mode</strong> (the default) runs on committed fixtures and pre-built assets with
+  <strong>zero network calls</strong>. Rounds, host voice lines and the share card all ship in the repo, so the
+  demo is deterministic and instant.</li>
+  <li><strong>Live mode</strong> turns on real xAI calls behind an environment flag, and is treated strictly as an
+  enhancement rather than a dependency.</li>
+</ul>
+
+<p>
+  The same split makes the live features safe to add, because each one degrades instead of breaking:
+</p>
+
+<ul>
+  <li><strong>Imagine</strong> — after the reveal, the share card is generated through the image API and re-broadcast
+  when it lands (~6.5s). Demo mode serves the committed card immediately.</li>
+  <li><strong>Voice</strong> — the browser mints a short-lived realtime token and opens a Grok voice session to speak
+  the host cues. Any failure falls back to the committed audio files, so the host never goes silent.</li>
+</ul>
+
+<p>
+  There's also a record flag that captures live responses back into the fixtures, so refreshing the offline demo
+  assets is a single command rather than hand-editing JSON.
+</p>
+
+<h2>Deploying it</h2>
+
+<p>
+  Three deploy paths are committed, and the README is honest about the trade-off between them: Render on the free
+  tier (what the live demo runs on — it sleeps after 15 minutes idle and takes about a minute to wake), Fly for
+  always-on at a few dollars a month, and a Hugging Face Docker Space that needs a paid account. All three run in
+  demo mode with no secrets attached.
+</p>
+
+<div class="note">
+  <i class="bi bi-info-circle"></i>
+  <p>The hosted demo sleeps when idle, so the first load can take about a minute to wake. Once a match is running
+  it stays up.</p>
+</div>
+
+<div class="link-row">
+  <a class="file-link" href="https://x-decoy.onrender.com"><i class="bi bi-joystick"></i> Play it live</a>
+  <a class="file-link" href="https://github.com/kunfupen/x-arcade-grokathon"><i class="bi bi-github"></i> Project repository</a>
+</div>
+
+<nav class="project-nav">
+  <a class="prev" href="../projects.html"><i class="bi bi-arrow-left"></i> All projects</a>
+  <a class="next" href="ai-model-guide.html">AI Model Guide <i class="bi bi-arrow-right"></i></a>
+</nav>
+
+</div>
+```

@@ -17,7 +17,7 @@ toc: false
 
   <div class="wrap hero-inner">
     <div class="hero-copy">
-      <p class="status"><span class="pulse"></span> Open to data science &amp; ML roles</p>
+      <p class="status"><span class="pulse"></span> Open to AI &amp; ML roles</p>
 
       <h1>Khang&nbsp;Thai</h1>
 
@@ -103,9 +103,10 @@ toc: false
             into making the system say what it actually knows.
           </p>
           <p>
-            Before that I built payment and subscription backends at a startup — which is where I learned that a model
-            only matters once someone can rely on it. That's the thread through everything here: careful statistics,
-            systems that hold up outside the notebook, and results a non-technical reader can act on.
+            Outside of work I keep building in the same direction — a self-updating catalog of frontier models with its
+            own eval harness and research agent, and a multiplayer game that asks players to pick the model-written reply
+            out of a lineup. That's the thread through all of it: careful statistics underneath, agentic systems on top,
+            and results a non-technical reader can act on.
           </p>
         </div>
       </div>
@@ -128,13 +129,18 @@ toc: false
           </div>
           <div class="divider"></div>
           <div>
+            <dt>Previously</dt>
+            <dd>B.S. Statistics &amp; Data Science, UCLA — 2025</dd>
+          </div>
+          <div class="divider"></div>
+          <div>
             <dt>Focus areas</dt>
-            <dd>RAG · Agentic workflows · Predictive modeling</dd>
+            <dd>Applied AI · Machine learning · Agentic workflows · LLMs &amp; RAG</dd>
           </div>
           <div class="divider"></div>
           <div>
             <dt>Open to</dt>
-            <dd>Data science, ML and AI engineering roles</dd>
+            <dd>AI and machine learning roles</dd>
           </div>
           <div class="divider"></div>
           <div>
@@ -230,11 +236,43 @@ toc: false
     <div class="section-head reveal">
       <p class="eyebrow">Selected work</p>
       <h2 class="section-title">Projects</h2>
-      <p class="section-lede">Predictive modeling, NLP, dashboards and backend systems — each one written up with the
+      <p class="section-lede">Agentic AI, LLM evaluation, predictive modeling and NLP — each one written up with the
       process, the numbers, and the limitations.</p>
     </div>
 
     <div class="proj-grid">
+      <a class="proj-card reveal" href="projects/x-arcade.html">
+        <div class="proj-thumb">
+          <img src="projects/x-arcade.svg" alt="Five replies with one machine-written, beside a thirty second timer" loading="lazy">
+          <span class="proj-date">Aug 2026</span>
+        </div>
+        <div class="proj-body">
+          <h3>X Arcade — Decoy</h3>
+          <p>A Grokathon hackathon build: spot the Grok-written reply among four human ones in thirty seconds.
+          Runs fully offline for the demo, with live xAI voice and image generation as an enhancement.</p>
+          <div class="chips">
+            <span class="chip">Python</span><span class="chip">xAI API</span><span class="chip">Multiplayer</span>
+          </div>
+          <span class="proj-more">Read the write-up <i class="bi bi-arrow-right"></i></span>
+        </div>
+      </a>
+
+      <a class="proj-card reveal" data-delay="90" href="projects/ai-model-guide.html">
+        <div class="proj-thumb">
+          <img src="projects/ai-model-guide.svg" alt="A catalog grid of model cards beside benchmark score bars" loading="lazy">
+          <span class="proj-date">2026</span>
+        </div>
+        <div class="proj-body">
+          <h3>AI Model Guide</h3>
+          <p>A catalog of 56 frontier models that maintains itself — an autonomous research agent writes new entries,
+          and an in-house eval suite scores models the day they ship.</p>
+          <div class="chips">
+            <span class="chip">Next.js</span><span class="chip">Agentic Workflow</span><span class="chip">LLM Eval</span>
+          </div>
+          <span class="proj-more">Read the write-up <i class="bi bi-arrow-right"></i></span>
+        </div>
+      </a>
+
       <a class="proj-card reveal" href="projects/diabetes-risk-model.html">
         <div class="proj-thumb">
           <img src="projects/diabetes-risk-model.svg" alt="ROC curve illustration for the diabetes risk model" loading="lazy">
@@ -381,7 +419,7 @@ toc: false
   <div class="wrap section-inner">
     <div class="section-head reveal">
       <p class="eyebrow">Education</p>
-      <h2 class="section-title">Training</h2>
+      <h2 class="section-title">Academic background</h2>
     </div>
 
     <div class="edu-grid">
@@ -423,13 +461,18 @@ toc: false
     <div class="cta reveal">
       <p class="eyebrow">Contact</p>
       <h2>Let's build something worth trusting.</h2>
-      <p>I'm looking for data science, machine learning and AI engineering roles — and I'm always happy to talk
-      about retrieval systems, model validation, or a dataset you can't quite crack.</p>
+      <p>I'm looking for AI and machine learning roles — and I'm always happy to talk about retrieval systems,
+      agentic workflows, model evaluation, or a dataset you can't quite crack.</p>
 
       <div class="hero-actions">
-        <a class="btn-solid" href="mailto:khangthai348@gmail.com"><i class="bi bi-send"></i> Get in touch</a>
-        <a class="btn-ghost" href="Khang_Thai_Resume.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-arrow-down"></i> Download resume</a>
+        <a class="btn-solid" href="mailto:khangthai348@gmail.com"><i class="bi bi-send"></i> Email me</a>
+        <button type="button" class="btn-ghost" id="copy-email" data-email="khangthai348@gmail.com">
+          <i class="bi bi-clipboard"></i> <span>Copy address</span>
+        </button>
+        <a class="btn-ghost" href="Khang_Thai_Resume.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-arrow-down"></i> Resume</a>
       </div>
+
+      <a class="mail-link" href="mailto:khangthai348@gmail.com">khangthai348@gmail.com</a>
 
       <ul class="social">
         <li><a href="mailto:khangthai348@gmail.com" aria-label="Email Khang"><i class="bi bi-envelope"></i></a></li>

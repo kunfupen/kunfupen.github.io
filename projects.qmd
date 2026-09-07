@@ -24,8 +24,8 @@ listing:
     <p class="eyebrow">Portfolio</p>
     <h1>Projects</h1>
     <p class="section-lede">
-      Selected work across predictive modeling, natural language processing, dashboards, and backend
-      software. Every project is written up end to end — the process, the numbers, and what I'd do differently.
+      Selected work across agentic AI, LLM evaluation, predictive modeling and natural language processing.
+      Every project is written up end to end — the process, the numbers, and what I'd do differently.
     </p>
   </div>
 </div>
@@ -33,6 +33,7 @@ listing:
 <div class="wrap">
   <div class="filter-bar" aria-label="Filter projects by year">
     <button type="button" class="filter-chip active" data-year="all">All</button>
+    <button type="button" class="filter-chip" data-year="2026">2026</button>
     <button type="button" class="filter-chip" data-year="2025">2025</button>
     <button type="button" class="filter-chip" data-year="2024">2024</button>
     <p class="filter-count" aria-live="polite"></p>

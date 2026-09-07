@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-label="Five replies with one machine-written, and a thirty second timer">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a1322"/><stop offset="0.55" stop-color="#0c1a2c"/><stop offset="1" stop-color="#08111d"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#35e0c8"/><stop offset="1" stop-color="#5cb8ff"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#35e0c8" stop-opacity="0.30"/><stop offset="1" stop-color="#35e0c8" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M50 0H0V50" fill="none" stroke="#7fb3e0" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <rect width="1200" height="750" fill="url(#grid)"/>
+  <ellipse cx="960" cy="130" rx="420" ry="300" fill="url(#glow)"/>
+  <g>
+      <rect x="80" y="232" width="560" height="62" rx="14" fill="#0f2033" stroke="#274866" stroke-width="2"/>
+      <circle cx="118" cy="263" r="13" fill="#2f4f6e"/>
+      <rect x="148" y="251" width="270" height="11" rx="5.5" fill="#456C90"/>
+      <rect x="148" y="270" width="162" height="9" rx="4.5" fill="#2f4f6e"/>
+    </g><g>
+      <rect x="80" y="316" width="560" height="62" rx="14" fill="#0f2033" stroke="#274866" stroke-width="2"/>
+      <circle cx="118" cy="347" r="13" fill="#2f4f6e"/>
+      <rect x="148" y="335" width="220" height="11" rx="5.5" fill="#456C90"/>
+      <rect x="148" y="354" width="132" height="9" rx="4.5" fill="#2f4f6e"/>
+    </g><g>
+      <rect x="80" y="400" width="560" height="62" rx="14" fill="#10263a" stroke="url(#acc)" stroke-width="3"/>
+      <circle cx="118" cy="431" r="13" fill="url(#acc)"/>
+      <rect x="148" y="419" width="295" height="11" rx="5.5" fill="#7fd8cc"/>
+      <rect x="148" y="438" width="177" height="9" rx="4.5" fill="#3f7d78"/>
+    </g><text x="672" y="439" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="26" letter-spacing="3" fill="#35e0c8">GROK?</text><g>
+      <rect x="80" y="484" width="560" height="62" rx="14" fill="#0f2033" stroke="#274866" stroke-width="2"/>
+      <circle cx="118" cy="515" r="13" fill="#2f4f6e"/>
+      <rect x="148" y="503" width="180" height="11" rx="5.5" fill="#456C90"/>
+      <rect x="148" y="522" width="108" height="9" rx="4.5" fill="#2f4f6e"/>
+    </g><g>
+      <rect x="80" y="568" width="560" height="62" rx="14" fill="#0f2033" stroke="#274866" stroke-width="2"/>
+      <circle cx="118" cy="599" r="13" fill="#2f4f6e"/>
+      <rect x="148" y="587" width="240" height="11" rx="5.5" fill="#456C90"/>
+      <rect x="148" y="606" width="144" height="9" rx="4.5" fill="#2f4f6e"/>
+    </g>
+  <circle cx="980" cy="430" r="86" fill="none" stroke="#274866" stroke-width="12"/>
+  <path d="M 980 344 A 86 86 0 1 1 905.5 387.0" fill="none" stroke="url(#acc)" stroke-width="12" stroke-linecap="round"/>
+  <text x="980" y="444" text-anchor="middle" font-family="'Space Grotesk',ui-sans-serif,sans-serif" font-weight="700" font-size="46" fill="#e8f1ff">30</text>
+  <text x="980" y="476" text-anchor="middle" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="20" letter-spacing="3" fill="#7f98b8">SEC</text>
+  <text x="72" y="112" font-family="'Space Grotesk',ui-sans-serif,sans-serif" font-weight="600" font-size="44" fill="#e8f1ff">X Arcade &#183; Decoy</text>
+  <text x="80" y="176" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="24" letter-spacing="3" fill="#7f98b8">SPOT THE MACHINE</text>
+
+  <text x="72" y="672" font-family="'JetBrains Mono',ui-monospace,monospace" font-size="30" letter-spacing="4" fill="#8fa6c4">GROKATHON &#183; PYTHON &#183; XAI API</text>
+</svg>
