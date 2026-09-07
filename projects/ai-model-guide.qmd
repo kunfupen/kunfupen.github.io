@@ -1,0 +1,100 @@
+---
+title: "AI Model Guide"
+description: "A self-updating catalog of 56 frontier models, with an autonomous research agent that writes new entries and a benchmark suite that scores models on launch day."
+date: "2026-05-17"
+author: "Khang Thai"
+image: "ai-model-guide.svg"
+body-classes: page-project
+page-layout: custom
+toc: false
+---
+
+```{=html}
+<div class="project-tags">
+  <div class="chips">
+    <span class="chip hot">Agentic Workflow</span>
+    <span class="chip hot">LLM Evaluation</span>
+    <span class="chip">Next.js 16</span>
+    <span class="chip">TypeScript</span>
+    <span class="chip">MDX</span>
+    <span class="chip">Zod</span>
+    <span class="chip">Tailwind CSS</span>
+  </div>
+</div>
+
+<div class="project-content">
+
+<p class="lede-para">
+  Comparing frontier models means hunting across four provider sites, a pricing page, and someone's thread on X.
+  AI Model Guide puts the specs, availability and distilled guidance for <strong>56 models</strong> in one place —
+  and then goes a step further: the catalog largely maintains itself.
+</p>
+
+<div class="results">
+  <div class="result"><span class="num">56</span><span class="lbl">Models catalogued across 5+ providers</span></div>
+  <div class="result"><span class="num">0</span><span class="lbl">API keys needed to run the eval self-test</span></div>
+  <div class="result"><span class="num">100%</span><span class="lbl">Static — every model page pre-rendered</span></div>
+</div>
+
+<h2>The catalog</h2>
+
+<ul>
+  <li>Each model is an MDX file with typed frontmatter — context window, modalities, pricing per million tokens,
+  availability, strengths, official docs.</li>
+  <li><strong>Zod validates that frontmatter at build time</strong>, so malformed data fails the build rather than
+  shipping a broken page. The schema is the single source of truth, and adding a model is a matter of matching it.</li>
+  <li>Built with <strong>Next.js 16</strong> on the App Router, statically generated, with Tailwind v4 for the
+  interface and static tweet embeds that need no X API at runtime.</li>
+</ul>
+
+<h2>The research agent</h2>
+
+<p>
+  The interesting problem isn't rendering the catalog — it's keeping it current. A tracker can notice that a model ID
+  it has never seen just appeared, but turning that signal into a correct, sourced model page used to need a person.
+  That's the step the agent automates:
+</p>
+
+<p style="font-family:var(--mono);font-size:0.92rem;color:var(--muted)">
+  tracker → &ldquo;grok-4.6 is new&rdquo; → research agent → validated spec → scaffold → build → publish
+</p>
+
+<ul>
+  <li>The agent researches a candidate model and emits a spec that has to satisfy the same Zod schema as a
+  hand-written entry — so the validation gate applies equally to machine-written pages.</li>
+  <li>It runs in a dry mode with no key and no cost, which makes the pipeline testable without spending anything.</li>
+</ul>
+
+<h2>AMG Eval — scoring models on day one</h2>
+
+<p>
+  Third-party leaderboards take days or weeks to score a new frontier model, which left the catalog able to describe a
+  launch but not compare it. So the project runs its own suite:
+</p>
+
+<ul>
+  <li>Deliberately <strong>small and honest</strong> rather than sweeping. It won't tell you which model is smartest —
+  it tells you how models compare on a fixed set of tasks under identical conditions.</li>
+  <li>Every number is <strong>reproducible</strong>: the suite self-tests with no API keys, scores a single model on
+  demand, or scores everything and writes the results back into the site.</li>
+  <li>The point is the methodology note as much as the score. A benchmark that overclaims is worse than no benchmark.</li>
+</ul>
+
+<h2>What I'd do next</h2>
+
+<ul>
+  <li>Widen the eval suite while keeping the same honesty constraint — more tasks, same fixed conditions.</li>
+  <li>Track pricing over time rather than as a snapshot, since that's the field that goes stale fastest.</li>
+</ul>
+
+<div class="link-row">
+  <a class="file-link" href="https://github.com/kunfupen/ai-model-guide"><i class="bi bi-github"></i> Project repository</a>
+</div>
+
+<nav class="project-nav">
+  <a class="prev" href="x-arcade.html"><i class="bi bi-arrow-left"></i> X Arcade — Decoy</a>
+  <a class="next" href="diabetes-risk-model.html">Diabetes Risk Model <i class="bi bi-arrow-right"></i></a>
+</nav>
+
+</div>
+```

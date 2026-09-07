@@ -6,6 +6,33 @@
   var resume = document.querySelector('.navbar a.nav-link[href$=".pdf"]');
   if (resume) resume.classList.add("nav-cta");
 
+  /* Copy the email address. A mailto: link does nothing on a device with no
+     mail client registered, so the address is copyable as a fallback. */
+  var copyBtn = document.getElementById("copy-email");
+  if (copyBtn) {
+    var label = copyBtn.querySelector("span");
+    var icon = copyBtn.querySelector("i");
+    var original = label.textContent;
+    copyBtn.addEventListener("click", function () {
+      var email = copyBtn.dataset.email;
+      var done = function (ok) {
+        label.textContent = ok ? "Copied" : email;
+        if (icon) icon.className = ok ? "bi bi-check2" : "bi bi-envelope";
+        copyBtn.classList.add("is-copied");
+        setTimeout(function () {
+          label.textContent = original;
+          if (icon) icon.className = "bi bi-clipboard";
+          copyBtn.classList.remove("is-copied");
+        }, 2200);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(function () { done(true); }, function () { done(false); });
+      } else {
+        done(false);
+      }
+    });
+  }
+
   /* Reveal-on-scroll */
   var targets = document.querySelectorAll(".reveal");
   if (reduce || !("IntersectionObserver" in window)) {

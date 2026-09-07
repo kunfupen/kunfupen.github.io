@@ -99,8 +99,8 @@ toc: false
 </div>
 
 <nav class="project-nav">
-  <a class="prev" href="task-manager.html"><i class="bi bi-arrow-left"></i> Task Manager</a>
-  <a class="next" href="../projects.html">All projects <i class="bi bi-arrow-right"></i></a>
+  <a class="prev" href="ai-model-guide.html"><i class="bi bi-arrow-left"></i> AI Model Guide</a>
+  <a class="next" href="task-manager.html">Task Manager <i class="bi bi-arrow-right"></i></a>
 </nav>
 
 </div>

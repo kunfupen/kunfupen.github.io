@@ -81,7 +81,7 @@ toc: false
 </div>
 
 <nav class="project-nav">
-  <a class="prev" href="../projects.html"><i class="bi bi-arrow-left"></i> All projects</a>
+  <a class="prev" href="task-manager.html"><i class="bi bi-arrow-left"></i> Task Manager</a>
   <a class="next" href="la-airbnb-analysis.html">LA Airbnb Analysis <i class="bi bi-arrow-right"></i></a>
 </nav>
 
