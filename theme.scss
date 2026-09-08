@@ -546,6 +546,26 @@ button.btn-ghost.is-copied {
   color: transparent;
 }
 
+.cap-ico {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 0.95rem;
+  border-radius: 10px;
+  background: rgba(53, 224, 200, 0.12);
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.cap-title {
+  font-family: var(--display);
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--bright);
+}
+
 .stat .lbl {
   display: block;
   margin-top: 0.55rem;

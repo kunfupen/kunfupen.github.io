@@ -58,24 +58,31 @@ toc: false
 
 </section>
 
-<!-- ═══════════════ STATS ═══════════════ -->
+<!-- ═══════════════ WHAT I BUILD ═══════════════ -->
 <div class="wrap">
   <div class="stats reveal">
     <div class="stat">
-      <div class="num"><span data-count="16" data-suffix="K+">16K+</span></div>
-      <span class="lbl">Controlled assay document chunks indexed for retrieval</span>
+      <span class="cap-ico"><i class="bi bi-layers-half"></i></span>
+      <div class="cap-title">Retrieval</div>
+      <span class="lbl">Hybrid dense and lexical search with cross-encoder reranking, over corpora where a wrong
+      answer costs something.</span>
     </div>
     <div class="stat">
-      <div class="num"><span data-count="0.99" data-decimals="2">0.99</span></div>
-      <span class="lbl">ROC-AUC on the diabetes risk classifier</span>
+      <span class="cap-ico"><i class="bi bi-diagram-3"></i></span>
+      <div class="cap-title">Agentic systems</div>
+      <span class="lbl">LangGraph orchestration with dynamic tool selection, fallback routing and human approval
+      gates.</span>
     </div>
     <div class="stat">
-      <div class="num"><span data-count="9.5" data-decimals="1" data-suffix="K">9.5K</span></div>
-      <span class="lbl">Clinical records cleaned, modeled and validated</span>
+      <span class="cap-ico"><i class="bi bi-speedometer2"></i></span>
+      <div class="cap-title">Evaluation</div>
+      <span class="lbl">Benchmarks and model diagnostics built so the numbers hold up when someone checks them.</span>
     </div>
     <div class="stat">
-      <div class="num"><span data-count="4">4</span></div>
-      <span class="lbl">Shipped projects across ML, NLP and backend</span>
+      <span class="cap-ico"><i class="bi bi-graph-up"></i></span>
+      <div class="cap-title">Statistics</div>
+      <span class="lbl">Regression, cross-validation and feature analysis — the part that says whether a result is
+      real.</span>
     </div>
   </div>
 </div>
@@ -97,16 +104,13 @@ toc: false
           </p>
           <p>
             At <strong>Hologic</strong> I architected a hybrid retrieval pipeline that pairs dense vector search with
-            lexical matching and neural reranking across a regulated assay-document corpus, then wrapped it in an
-            <em>agentic orchestration layer</em> with human-in-the-loop approval gates and schema validation. In a
-            bioinformatics setting a confident wrong answer is worse than no answer, so most of the engineering went
-            into making the system say what it actually knows.
-          </p>
-          <p>
-            Outside of work I keep building in the same direction — a self-updating catalog of frontier models with its
-            own eval harness and research agent, and a multiplayer game that asks players to pick the model-written reply
-            out of a lineup. That's the thread through all of it: careful statistics underneath, agentic systems on top,
-            and results a non-technical reader can act on.
+            lexical BM25 matching and cross-encoder reranking across a regulated assay-document corpus, then built an
+            <em>agentic orchestration workflow in LangGraph</em> on top of it — stateful multi-step reasoning, dynamic
+            tool selection, automated fallback routing, and human-in-the-loop approval gates backed by schema
+            validation. Around it I built the <strong>MCP servers</strong> that give the agents structured access to
+            internal tooling and data, and the <strong>evaluation harnesses</strong> used to measure what the pipeline
+            returns before anyone relies on it. In a bioinformatics setting a confident wrong answer is worse than no
+            answer, so most of the engineering went into making the system say what it actually knows.
           </p>
         </div>
       </div>
