@@ -58,35 +58,13 @@ toc: false
 
 </section>
 
-<!-- ═══════════════ STATS ═══════════════ -->
-<div class="wrap">
-  <div class="stats reveal">
-    <div class="stat">
-      <div class="num"><span data-count="16" data-suffix="K+">16K+</span></div>
-      <span class="lbl">Controlled assay document chunks indexed for retrieval</span>
-    </div>
-    <div class="stat">
-      <div class="num"><span data-count="0.99" data-decimals="2">0.99</span></div>
-      <span class="lbl">ROC-AUC on the diabetes risk classifier</span>
-    </div>
-    <div class="stat">
-      <div class="num"><span data-count="9.5" data-decimals="1" data-suffix="K">9.5K</span></div>
-      <span class="lbl">Clinical records cleaned, modeled and validated</span>
-    </div>
-    <div class="stat">
-      <div class="num"><span data-count="4">4</span></div>
-      <span class="lbl">Shipped projects across ML, NLP and backend</span>
-    </div>
-  </div>
-</div>
-
 <!-- ═══════════════ ABOUT ═══════════════ -->
 <section class="section" id="about">
   <div class="wrap">
     <div class="about-grid">
       <div class="reveal">
         <p class="eyebrow">About</p>
-        <h2 class="section-title">Statistics as the foundation, AI systems as the craft.</h2>
+        <h2 class="section-title">Machine learning as the foundation, AI systems as the craft.</h2>
 
         <div class="prose" style="margin-top:1.6rem">
           <p>
@@ -97,16 +75,13 @@ toc: false
           </p>
           <p>
             At <strong>Hologic</strong> I architected a hybrid retrieval pipeline that pairs dense vector search with
-            lexical matching and neural reranking across a regulated assay-document corpus, then wrapped it in an
-            <em>agentic orchestration layer</em> with human-in-the-loop approval gates and schema validation. In a
-            bioinformatics setting a confident wrong answer is worse than no answer, so most of the engineering went
-            into making the system say what it actually knows.
-          </p>
-          <p>
-            Outside of work I keep building in the same direction — a self-updating catalog of frontier models with its
-            own eval harness and research agent, and a multiplayer game that asks players to pick the model-written reply
-            out of a lineup. That's the thread through all of it: careful statistics underneath, agentic systems on top,
-            and results a non-technical reader can act on.
+            lexical BM25 matching and cross-encoder reranking across a regulated assay-document corpus, then built an
+            <em>agentic orchestration workflow in LangGraph</em> on top of it — stateful multi-step reasoning, dynamic
+            tool selection, automated fallback routing, and human-in-the-loop approval gates backed by schema
+            validation. Around it I built the <strong>MCP servers</strong> that give the agents structured access to
+            internal tooling and data, and the <strong>evaluation harnesses</strong> used to measure what the pipeline
+            returns before anyone relies on it. In a bioinformatics setting a confident wrong answer is worse than no
+            answer, so most of the engineering went into making the system say what it actually knows.
           </p>
         </div>
       </div>
@@ -225,6 +200,47 @@ toc: false
           <span class="chip">Jira</span>
           <span class="chip">Git</span>
         </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ EDUCATION ═══════════════ -->
+<section class="section" id="education">
+  <div class="wrap section-inner">
+    <div class="section-head reveal">
+      <p class="eyebrow">Education</p>
+      <h2 class="section-title">Academic background</h2>
+    </div>
+
+    <div class="edu-grid">
+      <article class="edu-item reveal">
+        <div>
+          <h3>University of Southern California</h3>
+          <p class="deg">M.S. <a href="https://datascience.usc.edu/academics/master-of-science-in-applied-data-science/">Applied Data Science</a></p>
+          <p class="course"><span>Coursework:</span> Machine Learning · Data Management · Deep Learning</p>
+        </div>
+        <div class="tl-when">Aug 2025 — May 2027<span class="place">Los Angeles, CA</span></div>
+      </article>
+
+      <article class="edu-item reveal" data-delay="80">
+        <div>
+          <h3>University of California, Los Angeles</h3>
+          <p class="deg">B.S. <a href="https://statistics.ucla.edu/index.php/academics/undergraduate/statistics-major-worksheets/">Statistics and Data Science</a></p>
+          <p class="course"><span>Coursework:</span> Statistical Models &amp; Data Mining · Data Analysis and Regression ·
+          Computation &amp; Optimization for Statistics · Monte Carlo Methods · Statistical Programming with R ·
+          Python for Data Science · Statistical Consulting · Databases</p>
+        </div>
+        <div class="tl-when">Sep 2023 — Jun 2025<span class="place">Los Angeles, CA</span></div>
+      </article>
+
+      <article class="edu-item reveal" data-delay="120">
+        <div>
+          <h3>San Diego Miramar College</h3>
+          <p class="deg">Associate of Science</p>
+          <p class="course"><span>Honors:</span> Dean's List, 2021 – 2023</p>
+        </div>
+        <div class="tl-when">Aug 2021 — May 2023<span class="place">San Diego, CA</span></div>
       </article>
     </div>
   </div>
@@ -410,47 +426,6 @@ toc: false
           <span class="chip">Tableau</span>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════ EDUCATION ═══════════════ -->
-<section class="section" id="education">
-  <div class="wrap section-inner">
-    <div class="section-head reveal">
-      <p class="eyebrow">Education</p>
-      <h2 class="section-title">Academic background</h2>
-    </div>
-
-    <div class="edu-grid">
-      <article class="edu-item reveal">
-        <div>
-          <h3>University of Southern California</h3>
-          <p class="deg">M.S. <a href="https://datascience.usc.edu/academics/master-of-science-in-applied-data-science/">Applied Data Science</a></p>
-          <p class="course"><span>Coursework:</span> Machine Learning · Data Management · Deep Learning</p>
-        </div>
-        <div class="tl-when">Aug 2025 — May 2027<span class="place">Los Angeles, CA</span></div>
-      </article>
-
-      <article class="edu-item reveal" data-delay="80">
-        <div>
-          <h3>University of California, Los Angeles</h3>
-          <p class="deg">B.S. <a href="https://statistics.ucla.edu/index.php/academics/undergraduate/statistics-major-worksheets/">Statistics and Data Science</a></p>
-          <p class="course"><span>Coursework:</span> Statistical Models &amp; Data Mining · Data Analysis and Regression ·
-          Computation &amp; Optimization for Statistics · Monte Carlo Methods · Statistical Programming with R ·
-          Python for Data Science · Statistical Consulting · Databases</p>
-        </div>
-        <div class="tl-when">Sep 2023 — Jun 2025<span class="place">Los Angeles, CA</span></div>
-      </article>
-
-      <article class="edu-item reveal" data-delay="120">
-        <div>
-          <h3>San Diego Miramar College</h3>
-          <p class="deg">Associate of Science</p>
-          <p class="course"><span>Honors:</span> Dean's List, 2021 – 2023</p>
-        </div>
-        <div class="tl-when">Aug 2021 — May 2023<span class="place">San Diego, CA</span></div>
-      </article>
     </div>
   </div>
 </section>

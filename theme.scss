@@ -513,62 +513,6 @@ button.btn-ghost.is-copied {
   50%      { transform: translateY(6px); opacity: 1; }
 }
 
-/* ── Stats ─────────────────────────────────────────────────────────────── */
-.stats {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  overflow: hidden;
-  margin-top: clamp(-3.5rem, -4vw, -2rem);
-  position: relative;
-  z-index: 2;
-  box-shadow: var(--shadow);
-}
-
-.stat {
-  padding: 1.6rem 1.4rem;
-  background: rgba(9, 15, 27, 0.92);
-  backdrop-filter: blur(10px);
-}
-
-.stat .num {
-  font-family: var(--display);
-  font-size: clamp(1.75rem, 3.4vw, 2.35rem);
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -0.02em;
-  background: linear-gradient(120deg, var(--accent), var(--accent-2));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.stat .lbl {
-  display: block;
-  margin-top: 0.55rem;
-  font-size: 0.83rem;
-  line-height: 1.45;
-  color: var(--muted);
-}
-
-/* Quarto's column system places some elements (aside, figures, .column-*) into
-   named grid lines that don't exist in these grids, which would spawn implicit
-   tracks. Keep every child in normal flow. */
-.about-grid > *,
-.stats > *,
-.proj-grid > *,
-.skill-grid > *,
-.edu-grid > *,
-.timeline > *,
-.results > *,
-.hero-inner > * {
-  grid-column: auto;
-  grid-row: auto;
-}
-
 /* ── Cards ─────────────────────────────────────────────────────────────── */
 .card-surface {
   border: 1px solid var(--line);
@@ -1363,7 +1307,6 @@ footer.footer {
   .hero { min-height: 0; padding-top: clamp(2.5rem, 8vw, 4rem); }
   .hero-tagline { max-width: 100%; }
   .about-grid { grid-template-columns: 1fr; }
-  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: -2rem; }
   .navbar .nav-link { margin-inline: 0; }
   .navbar .nav-link.nav-cta { margin: 0.5rem 0 0; display: inline-flex; }
 }
@@ -1379,6 +1322,5 @@ footer.footer {
 }
 
 @media (max-width: 520px) {
-  .stats { grid-template-columns: 1fr; }
   .hero-actions .btn-solid, .hero-actions .btn-ghost { width: 100%; justify-content: center; }
 }
