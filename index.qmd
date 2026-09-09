@@ -58,35 +58,6 @@ toc: false
 
 </section>
 
-<!-- ═══════════════ WHAT I BUILD ═══════════════ -->
-<div class="wrap">
-  <div class="stats reveal">
-    <div class="stat">
-      <span class="cap-ico"><i class="bi bi-layers-half"></i></span>
-      <div class="cap-title">Retrieval</div>
-      <span class="lbl">Hybrid dense and lexical search with cross-encoder reranking, over corpora where a wrong
-      answer costs something.</span>
-    </div>
-    <div class="stat">
-      <span class="cap-ico"><i class="bi bi-diagram-3"></i></span>
-      <div class="cap-title">Agentic systems</div>
-      <span class="lbl">LangGraph orchestration with dynamic tool selection, fallback routing and human approval
-      gates.</span>
-    </div>
-    <div class="stat">
-      <span class="cap-ico"><i class="bi bi-speedometer2"></i></span>
-      <div class="cap-title">Evaluation</div>
-      <span class="lbl">Benchmarks and model diagnostics built so the numbers hold up when someone checks them.</span>
-    </div>
-    <div class="stat">
-      <span class="cap-ico"><i class="bi bi-graph-up"></i></span>
-      <div class="cap-title">Statistics</div>
-      <span class="lbl">Regression, cross-validation and feature analysis — the part that says whether a result is
-      real.</span>
-    </div>
-  </div>
-</div>
-
 <!-- ═══════════════ ABOUT ═══════════════ -->
 <section class="section" id="about">
   <div class="wrap">
