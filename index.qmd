@@ -157,47 +157,6 @@ toc: false
   </div>
 </section>
 
-<!-- ═══════════════ EDUCATION ═══════════════ -->
-<section class="section" id="education">
-  <div class="wrap section-inner">
-    <div class="section-head reveal">
-      <p class="eyebrow">Education</p>
-      <h2 class="section-title">Academic background</h2>
-    </div>
-
-    <div class="edu-grid">
-      <article class="edu-item reveal">
-        <div>
-          <h3>University of Southern California</h3>
-          <p class="deg">M.S. <a href="https://datascience.usc.edu/academics/master-of-science-in-applied-data-science/">Applied Data Science</a></p>
-          <p class="course"><span>Coursework:</span> Machine Learning · Data Management · Deep Learning</p>
-        </div>
-        <div class="tl-when">Aug 2025 — May 2027<span class="place">Los Angeles, CA</span></div>
-      </article>
-
-      <article class="edu-item reveal" data-delay="80">
-        <div>
-          <h3>University of California, Los Angeles</h3>
-          <p class="deg">B.S. <a href="https://statistics.ucla.edu/index.php/academics/undergraduate/statistics-major-worksheets/">Statistics and Data Science</a></p>
-          <p class="course"><span>Coursework:</span> Statistical Models &amp; Data Mining · Data Analysis and Regression ·
-          Computation &amp; Optimization for Statistics · Monte Carlo Methods · Statistical Programming with R ·
-          Python for Data Science · Statistical Consulting · Databases</p>
-        </div>
-        <div class="tl-when">Sep 2023 — Jun 2025<span class="place">Los Angeles, CA</span></div>
-      </article>
-
-      <article class="edu-item reveal" data-delay="120">
-        <div>
-          <h3>San Diego Miramar College</h3>
-          <p class="deg">Associate of Science</p>
-          <p class="course"><span>Honors:</span> Dean's List, 2021 – 2023</p>
-        </div>
-        <div class="tl-when">Aug 2021 — May 2023<span class="place">San Diego, CA</span></div>
-      </article>
-    </div>
-  </div>
-</section>
-
 <!-- ═══════════════ EXPERIENCE ═══════════════ -->
 <section class="section" id="experience">
   <div class="wrap section-inner">
@@ -270,6 +229,47 @@ toc: false
           <span class="chip">Jira</span>
           <span class="chip">Git</span>
         </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ EDUCATION ═══════════════ -->
+<section class="section" id="education">
+  <div class="wrap section-inner">
+    <div class="section-head reveal">
+      <p class="eyebrow">Education</p>
+      <h2 class="section-title">Academic background</h2>
+    </div>
+
+    <div class="edu-grid">
+      <article class="edu-item reveal">
+        <div>
+          <h3>University of Southern California</h3>
+          <p class="deg">M.S. <a href="https://datascience.usc.edu/academics/master-of-science-in-applied-data-science/">Applied Data Science</a></p>
+          <p class="course"><span>Coursework:</span> Machine Learning · Data Management · Deep Learning</p>
+        </div>
+        <div class="tl-when">Aug 2025 — May 2027<span class="place">Los Angeles, CA</span></div>
+      </article>
+
+      <article class="edu-item reveal" data-delay="80">
+        <div>
+          <h3>University of California, Los Angeles</h3>
+          <p class="deg">B.S. <a href="https://statistics.ucla.edu/index.php/academics/undergraduate/statistics-major-worksheets/">Statistics and Data Science</a></p>
+          <p class="course"><span>Coursework:</span> Statistical Models &amp; Data Mining · Data Analysis and Regression ·
+          Computation &amp; Optimization for Statistics · Monte Carlo Methods · Statistical Programming with R ·
+          Python for Data Science · Statistical Consulting · Databases</p>
+        </div>
+        <div class="tl-when">Sep 2023 — Jun 2025<span class="place">Los Angeles, CA</span></div>
+      </article>
+
+      <article class="edu-item reveal" data-delay="120">
+        <div>
+          <h3>San Diego Miramar College</h3>
+          <p class="deg">Associate of Science</p>
+          <p class="course"><span>Honors:</span> Dean's List, 2021 – 2023</p>
+        </div>
+        <div class="tl-when">Aug 2021 — May 2023<span class="place">San Diego, CA</span></div>
       </article>
     </div>
   </div>
