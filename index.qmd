@@ -93,7 +93,7 @@ toc: false
     <div class="about-grid">
       <div class="reveal">
         <p class="eyebrow">About</p>
-        <h2 class="section-title">Statistics as the foundation, AI systems as the craft.</h2>
+        <h2 class="section-title">Machine learning as the foundation, AI systems as the craft.</h2>
 
         <div class="prose" style="margin-top:1.6rem">
           <p>
