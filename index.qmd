@@ -26,7 +26,7 @@ toc: false
       </p>
 
       <p class="hero-sub">
-        Master's student in Applied Data Science at USC, bioinformatics intern at Hologic,
+        Master's student in Applied Data Science at USC, AI Research Associate at Hologic,
         and a statistician by training — working where rigorous modeling meets production AI.
       </p>
 
@@ -50,7 +50,7 @@ toc: false
         <span class="ico"><i class="bi bi-cpu"></i></span>
         <span>
           <span class="k">Currently</span>
-          <span class="v">Bioinformatics Intern · Hologic</span>
+          <span class="v">AI Research Associate II · Hologic</span>
         </span>
       </div>
     </div>
@@ -74,14 +74,14 @@ toc: false
             and I've spent the last year pushing that foundation into applied AI.
           </p>
           <p>
-            At <strong>Hologic</strong> I architected a hybrid retrieval pipeline that pairs dense vector search with
-            lexical BM25 matching and cross-encoder reranking across a regulated assay-document corpus, then built an
-            <em>agentic orchestration workflow in LangGraph</em> on top of it — stateful multi-step reasoning, dynamic
-            tool selection, automated fallback routing, and human-in-the-loop approval gates backed by schema
-            validation. Around it I built the <strong>MCP servers</strong> that give the agents structured access to
-            internal tooling and data, and the <strong>evaluation harnesses</strong> used to measure what the pipeline
-            returns before anyone relies on it. In a bioinformatics setting a confident wrong answer is worse than no
-            answer, so most of the engineering went into making the system say what it actually knows.
+            At <strong>Hologic</strong> I architected a hybrid retrieval pipeline — dense vector search, BM25 and
+            cross-encoder reranking over 15,000+ chunks from 270+ controlled assay documents, which doubled top-1
+            retrieval accuracy — and now build the <em>multi-step LangGraph agents</em> that sit on top of it, with
+            tool calling and stateful human approval gates. Those workflows reach GitHub Copilot over the
+            <strong>Model Context Protocol</strong>, and an <strong>evaluation harness of 195 checks</strong> covers
+            schema, data fidelity and reproducibility before a draft goes anywhere. In a regulated setting a
+            confident wrong answer is worse than no answer, so most of the engineering went into keeping model output
+            out of signed deliverables and making the system say what it actually knows.
           </p>
         </div>
       </div>
@@ -95,7 +95,7 @@ toc: false
           <div class="divider"></div>
           <div>
             <dt>Currently</dt>
-            <dd>Bioinformatics Intern @ Hologic</dd>
+            <dd>AI Research Associate II @ Hologic</dd>
           </div>
           <div class="divider"></div>
           <div>
@@ -134,7 +134,7 @@ toc: false
     <div class="section-head reveal">
       <p class="eyebrow">Experience</p>
       <h2 class="section-title">Where I've built things</h2>
-      <p class="section-lede">Two internships, two very different problems: making a regulated document corpus
+      <p class="section-lede">Three roles, two very different problems: making a regulated document corpus
       answerable, and making money move reliably.</p>
     </div>
 
@@ -142,38 +142,66 @@ toc: false
       <article class="tl-item reveal">
         <div class="tl-top">
           <div>
-            <h3 class="tl-role">Bioinformatics Intern</h3>
+            <h3 class="tl-role">AI Research Associate II</h3>
             <span class="tl-org">Hologic, Inc.</span>
           </div>
           <div class="tl-when">
-            June 2026 — Present
+            Sept 2026 — Present
             <span class="place">San Diego, CA</span>
           </div>
         </div>
         <ul>
-          <li>Architected a <strong>hybrid Retrieval-Augmented Generation pipeline</strong> combining dense vector
-          search (Qdrant), lexical BM25 matching, and cross-encoder neural reranking (bge-reranker) across
-          <strong>16,000+ controlled assay document chunks</strong>.</li>
-          <li>Built an <strong>agentic orchestration layer</strong> with LangGraph to manage stateful multi-step
-          reasoning, dynamic tool selection, and automated fallback routing across complex document analysis tasks.</li>
-          <li>Implemented <strong>human-in-the-loop approval gates</strong> and structured Pydantic schema validation
-          to mitigate hallucinations and meet rigorous bioinformatics regulatory standards.</li>
-          <li>Designed scalable document ingestion and indexing microservices, streamlining processing workflows and
-          accelerating knowledge discovery across internal assay datasets.</li>
+          <li>Built <strong>multi-step LangGraph agents</strong> — retrieve, assess, answer, review — with LLM tool
+          calling and stateful human approval gates, for regulated scientific document Q&amp;A and report drafting.</li>
+          <li>Integrated the agent workflows with GitHub Copilot over the <strong>Model Context Protocol</strong>,
+          exposing retrieval tools and a pause/resume workflow on a shared backend.</li>
+          <li>Built an <strong>evaluation harness of 195 checks</strong> covering schema, data fidelity and
+          reproducibility, validating end-to-end report drafts generated from heterogeneous lab data exports.</li>
         </ul>
         <div class="chips">
           <span class="chip hot">LangGraph</span>
-          <span class="chip hot">Hybrid RAG</span>
-          <span class="chip">Qdrant</span>
-          <span class="chip">BM25</span>
-          <span class="chip">Cross-Encoder Reranking</span>
-          <span class="chip">Pydantic</span>
-          <span class="chip">FastAPI</span>
+          <span class="chip hot">MCP</span>
+          <span class="chip hot">Agentic Workflows</span>
+          <span class="chip">Tool Calling</span>
+          <span class="chip">Human-in-the-Loop</span>
+          <span class="chip">Evaluation Harnesses</span>
           <span class="chip">Python</span>
         </div>
       </article>
 
       <article class="tl-item reveal" data-delay="90">
+        <div class="tl-top">
+          <div>
+            <h3 class="tl-role">Bioinformatics Intern</h3>
+            <span class="tl-org">Hologic, Inc.</span>
+          </div>
+          <div class="tl-when">
+            June 2026 — Sept 2026
+            <span class="place">San Diego, CA</span>
+          </div>
+        </div>
+        <ul>
+          <li>Architected a <strong>hybrid RAG pipeline</strong> combining dense vector search, BM25 and
+          cross-encoder reranking over <strong>15,000+ chunks from 270+ controlled assay documents</strong>,
+          <strong>doubling top-1 retrieval accuracy</strong>.</li>
+          <li>Designed a <strong>human-in-the-loop workflow</strong> where the model proposes cited content,
+          reviewers approve, and a deterministic generator fills controlled Word templates — keeping model output
+          out of signed deliverables.</li>
+          <li>Shipped an OpenWebUI chat interface on a <strong>FastAPI</strong> backend with grounded abstention and
+          a report-generation tool that turns raw data packages into draft reports.</li>
+        </ul>
+        <div class="chips">
+          <span class="chip hot">Hybrid RAG</span>
+          <span class="chip">Qdrant</span>
+          <span class="chip">BM25</span>
+          <span class="chip">Cross-Encoder Reranking</span>
+          <span class="chip">OpenWebUI</span>
+          <span class="chip">FastAPI</span>
+          <span class="chip">Python</span>
+        </div>
+      </article>
+
+      <article class="tl-item reveal" data-delay="120">
         <div class="tl-top">
           <div>
             <h3 class="tl-role">Software Development Backend Intern</h3>
@@ -218,7 +246,7 @@ toc: false
         <div>
           <h3>University of Southern California</h3>
           <p class="deg">M.S. <a href="https://datascience.usc.edu/academics/master-of-science-in-applied-data-science/">Applied Data Science</a></p>
-          <p class="course"><span>Coursework:</span> Machine Learning · Data Management · Deep Learning</p>
+          <p class="course"><span>Coursework:</span> Deep Learning · Machine Learning · Data Management · Web Development</p>
         </div>
         <div class="tl-when">Aug 2025 — May 2027<span class="place">Los Angeles, CA</span></div>
       </article>
@@ -227,9 +255,8 @@ toc: false
         <div>
           <h3>University of California, Los Angeles</h3>
           <p class="deg">B.S. <a href="https://statistics.ucla.edu/index.php/academics/undergraduate/statistics-major-worksheets/">Statistics and Data Science</a></p>
-          <p class="course"><span>Coursework:</span> Statistical Models &amp; Data Mining · Data Analysis and Regression ·
-          Computation &amp; Optimization for Statistics · Monte Carlo Methods · Statistical Programming with R ·
-          Python for Data Science · Statistical Consulting · Databases</p>
+          <p class="course"><span>Coursework:</span> Statistical Models &amp; Data Mining · Regression ·
+          Optimization · Monte Carlo Methods · Databases</p>
         </div>
         <div class="tl-when">Sep 2023 — Jun 2025<span class="place">Los Angeles, CA</span></div>
       </article>
@@ -376,9 +403,10 @@ toc: false
           <span class="chip hot">Hybrid RAG (Dense + BM25)</span>
           <span class="chip hot">Cross-Encoder Reranking</span>
           <span class="chip hot">Agentic Workflows</span>
-          <span class="chip hot">Multi-Agent Orchestration</span>
-          <span class="chip">Structured Schema Validation</span>
-          <span class="chip">Prompt Engineering</span>
+          <span class="chip hot">Model Context Protocol</span>
+          <span class="chip hot">Tool Calling</span>
+          <span class="chip">Human-in-the-Loop</span>
+          <span class="chip">Evaluation Harnesses</span>
           <span class="chip">NLP</span>
           <span class="chip">Supervised &amp; Unsupervised Learning</span>
           <span class="chip">Statistical Modeling</span>
@@ -390,6 +418,7 @@ toc: false
         <div class="chips">
           <span class="chip">LangGraph</span>
           <span class="chip">LangChain</span>
+          <span class="chip">OpenWebUI</span>
           <span class="chip">PyTorch</span>
           <span class="chip">Scikit-Learn</span>
           <span class="chip">Pydantic</span>
