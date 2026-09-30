@@ -32,7 +32,8 @@ toc: false
 <div class="results">
   <div class="result"><span class="num">76%</span><span class="lbl">Random forest accuracy on Superhost status</span></div>
   <div class="result"><span class="num">74%</span><span class="lbl">Logistic regression accuracy</span></div>
-  <div class="result"><span class="num">2</span><span class="lbl">Datasets joined: listings and reviews</span></div>
+  <div class="result"><span class="num">55K+</span><span class="lbl">Guest reviews topic-modelled</span></div>
+  <div class="result"><span class="num">45K+</span><span class="lbl">LA listings in the dashboard</span></div>
 </div>
 
 <h2>Host analysis</h2>
@@ -49,8 +50,8 @@ toc: false
 <h2>Review analysis with NLP</h2>
 
 <ul>
-  <li>Ran <strong>sentiment analysis</strong> across the review corpus to separate the language of high- and low-rated
-  stays.</li>
+  <li>Ran <strong>sentiment analysis</strong> across <strong>55,000+ guest reviews</strong> to separate the language
+  of high- and low-rated stays.</li>
   <li>Used <strong>Latent Dirichlet Allocation</strong> for topic modeling, surfacing the recurring themes behind poor
   reviews — cleanliness, check-in friction, and gaps between listing photos and reality.</li>
   <li>These are diagnosable problems. A host who reads "the shower pressure" in their topic weights knows exactly what
@@ -60,8 +61,9 @@ toc: false
 <h2>Interactive dashboard</h2>
 
 <p>
-  The listings side is published as a Tableau dashboard: price distributions by neighborhood and room type, listing
-  density on a map of LA, and filters for beds, region, Superhost status, price and rating.
+  The listings side is published as a Tableau dashboard covering <strong>45,000+ LA listings</strong>: price
+  distributions by neighborhood and room type, listing density on a map, and filters for beds, region, Superhost
+  status, price and rating.
 </p>
 
 <div class="tableau-embed">
